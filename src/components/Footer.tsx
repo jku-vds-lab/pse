@@ -2,100 +2,106 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="text-center text-white bg-secondary">
-            <div className="container">
-                <section className="mt-5">
+<footer className="text-center text-lg-start bg-light text-muted">
+  <section
+    className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <div className="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
 
-                    <div className="row text-center d-flex justify-content-center pt-5">
+    <div>
+      <a href="" className="me-4 text-reset">
+        <i className="fab fa-facebook-f"></i>
+      </a>
+      <a href="" className="me-4 text-reset">
+        <i className="fab fa-twitter"></i>
+      </a>
+      <a href="" className="me-4 text-reset">
+        <i className="fab fa-google"></i>
+      </a>
+      <a href="" className="me-4 text-reset">
+        <i className="fab fa-instagram"></i>
+      </a>
+      <a href="" className="me-4 text-reset">
+        <i className="fab fa-linkedin"></i>
+      </a>
+      <a href="" className="me-4 text-reset">
+        <i className="fab fa-github"></i>
+      </a>
+    </div>
+  </section>
 
-                        <div className="col-md-2">
-                            <h6 className="text-uppercase font-weight-bold">
-                                <a href="#!" className="text-white">About us</a>
-                            </h6>
-                        </div>
+  <section className="">
+    <div className="container text-center text-md-start mt-5">
+      <div className="row mt-3">
+        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
+            <i className="fas fa-gem me-3"></i>Company name
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
 
+        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" className="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Laravel</a>
+          </p>
+        </div>
 
+        <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" className="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Help</a>
+          </p>
+        </div>
 
-                        <div className="col-md-2">
-                            <h6 className="text-uppercase font-weight-bold">
-                                <a href="#!" className="text-white">Products</a>
-                            </h6>
-                        </div>
+        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i className="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i className="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i className="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i className="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-
-                        <div className="col-md-2">
-                            <h6 className="text-uppercase font-weight-bold">
-                                <a href="#!" className="text-white">Awards</a>
-                            </h6>
-                        </div>
-
-
-
-                        <div className="col-md-2">
-                            <h6 className="text-uppercase font-weight-bold">
-                                <a href="#!" className="text-white">Help</a>
-                            </h6>
-                        </div>
-
-
-
-                        <div className="col-md-2">
-                            <h6 className="text-uppercase font-weight-bold">
-                                <a href="#!" className="text-white">Contact</a>
-                            </h6>
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <hr className="my-5" />
-
-                <section className="mb-5">
-                    <div className="row d-flex justify-content-center">
-                        <div className="col-lg-8">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                                distinctio earum repellat quaerat voluptatibus placeat nam,
-                                commodi optio pariatur est quia magnam eum harum corrupti
-                                dicta, aliquam sequi voluptate quas.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="text-center mb-5">
-                    <a href="" className="text-white me-4">
-                        <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" className="text-white me-4">
-                        <i className="fab fa-twitter"></i>
-                    </a>
-                    <a href="" className="text-white me-4">
-                        <i className="fab fa-google"></i>
-                    </a>
-                    <a href="" className="text-white me-4">
-                        <i className="fab fa-instagram"></i>
-                    </a>
-                    <a href="" className="text-white me-4">
-                        <i className="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" className="text-white me-4">
-                        <i className="fab fa-github"></i>
-                    </a>
-                </section>
-            </div>
-
-            <div
-                className="text-center p-3"
-            >
-                © 2020 Copyright:
-                <a className="text-white" href="https://mdbootstrap.com/"
-                >MDBootstrap.com</a
-                >
-            </div>
-        </footer>
+  <div className="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
+    © 2021 Copyright:
+    <a className="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+</footer>
     );
 }
 
