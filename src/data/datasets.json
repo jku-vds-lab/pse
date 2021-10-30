@@ -1,0 +1,8 @@
+{
+    "dataset_1": {
+        "type": "String"
+    },
+    "dataset_2": {
+        "type": "String"
+    }
+}
