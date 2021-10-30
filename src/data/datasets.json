@@ -1,6 +1,10 @@
 {
     "dataset_1": {
-        "type": "String"
+        "name": "Rubik's Cube",
+        "type": "Temporal Data",
+        "description": "This is the description for the Rubik's Cube data. This needs to be done!",
+        "tags": ["Circles", "Bundles", "Points", "Speed"],
+        "imagePath": "../assets/datasetImages/dataset_1.png"
     },
     "dataset_2": {
         "type": "String"

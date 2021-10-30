@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from '../assets/logo.svg';
 import 'bootstrap';
 import { Link } from 'react-router-dom';
@@ -14,6 +13,7 @@ function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
             <li className="nav-item me-2">
