@@ -1,46 +1,14 @@
-# Getting Started with Create React App
+# Presentation of Application Examples for ProjectionPathExplorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+In a recent publication, we introduced ProjectionPathExplorer [1], an interactive visualization of high-dimensional processes as trajectories in a low-dimensional embedding space. In the paper, we describe how this type of visualization can be applied to a wide variety of domains. So far, the online prototype contains examples from Rubik’s cube, chess, interaction data, neural networks and Go. We have recently collected a number of additional application scenarios from student projects in the Explainable AI course. We would like to make all the different examples available and easily accessible as part of the ProjectionPathExplorer paper website. This task includes consolidating the different datasets and making them individually accessible via dedicated links, as well as potentially adapting the prototype with domain-specific summary visualizations for those applications that do not yet include them. The final result should be a neatly arranged collection of links and short descriptions that showcase the generalizability of the tool and can be used for publicity and presentation purposes.
 
-## Available Scripts
+1. Hinterreiter, Andreas, Christian Steinparz, Moritz Schöfl, Holger Stitz, and Marc Streit. 2021. “ProjectionPathExplorer: Exploring Visual Patterns in Projected Decision-Making Paths.” ACM Transactions on Interactive Intelligent Systems. Special Issue on "Interactive Visual Analytics for Making Explainable and Accountable Decisions" (To be published): 1-30. https://arxiv.org/abs/2001.08372 .
 
-In the project directory, you can run:
+## Start Applicatiion
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Build Application
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
