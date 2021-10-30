@@ -16,6 +16,7 @@ function App() {
           <Route path="/datasets" component={DatasetsPage} />
           <Route path="/publications" component={PublicationsPage} />
         </Switch>
+        <div className="b-example-divider"></div>
         <Footer />
       </div>
     </Router>
