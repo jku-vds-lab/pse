@@ -1,14 +1,21 @@
 import '../styles/DatasetsCard.css';
 import {TagsColorsIndex, tagColors} from '../modules/Tags';
 
-// make this modular later
-import datasetImage from '../assets/datasetImages/dataset_1.png';
-
-interface IDatasetsCardProps {
-  datasetInfo: any
+interface IDatasetCardProps {
+  datasetInfo: IDatasetInfo
 }
 
-function DatasetsCard(props: IDatasetsCardProps) {
+interface IDatasetInfo {
+  name: string;
+  type: string;
+  description: string;
+  tags: string[];
+  imagePath: string;
+
+}
+
+function DatasetsCard(props: IDatasetCardProps) {
+  const datasetImage = require(`../assets/datasetImages/${props.datasetInfo.imagePath}`).default; 
 
   return (
     <div className="card dataset-card mb-5">
