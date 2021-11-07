@@ -5,7 +5,7 @@ function DatasetsPage() {
   return (
     <div className="container mt-5 d-flex flex-row justify-content-around flex-wrap">
         <DatasetsCard datasetInfo={datasets.dataset_1}/>
-        <DatasetsCard datasetInfo={datasets.dataset_1}/>
+        <DatasetsCard datasetInfo={datasets.dataset_2}/>
         <DatasetsCard datasetInfo={datasets.dataset_1}/>
         <DatasetsCard datasetInfo={datasets.dataset_1}/>
     </div>
