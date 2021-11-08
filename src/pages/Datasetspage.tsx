@@ -1,13 +1,10 @@
 import DatasetsCard from '../components/DatasetsCard';
-import * as datasets from '../data/datasets.json';
+import {datasets} from '../data/datasets';
 
 function DatasetsPage() {
   return (
-    <div className="container mt-5 d-flex flex-row justify-content-around flex-wrap">
-        <DatasetsCard datasetInfo={datasets.dataset_1}/>
-        <DatasetsCard datasetInfo={datasets.dataset_2}/>
-        <DatasetsCard datasetInfo={datasets.dataset_1}/>
-        <DatasetsCard datasetInfo={datasets.dataset_1}/>
+    <div className="mt-5 d-flex flex-row justify-content-around flex-wrap">
+      {datasets.map((dataset) => <DatasetsCard key={dataset.id} datasetInfo={dataset}/>)}
     </div>
   );
 }
