@@ -3,7 +3,7 @@ import screenshot from '../assets/screenshot.png';
 
 function Hero() {
     return (
-        <div className="px-4 pt-5 my-5 text-center border-bottom">
+        <div className="px-4 pt-5 my-5 text-center border-bottom shadow-sm mb-5 bg-body rounded">
             <h1 className="display-4 fw-bold">Projection Path Explorer</h1>
             <div className="col-lg-6 mx-auto">
                 <p className="lead mb-4">
