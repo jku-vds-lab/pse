@@ -1,4 +1,3 @@
-import { useAsync } from "react-async";
 import '../styles/DatasetsCard.css';
 import {TagsColorsIndex, tagColors} from '../modules/Tags';
 
@@ -12,18 +11,10 @@ interface IDatasetInfo {
   description: string;
   tags: string[];
   imagePath: string;
-
 }
 
-// You can use async/await or any function that returns a Promise
-const loadPlayer = async (imgPath: string) => { 
-  const res = await require(imgPath).default; 
-  return res;
-}
 
 function DatasetsCard(props: IDatasetCardProps) {
-  const { data, error, isPending } = useAsync(loadPlayer(`../assets/datasetImages/${props.datasetInfo.imagePath}`))
-  console.log(isPending)
   const datasetImage = require(`../assets/datasetImages/${props.datasetInfo.imagePath}`).default; 
 
   return (
