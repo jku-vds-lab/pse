@@ -23,7 +23,6 @@ function Hero() {
                     <img src={screenshot} className="img-fluid border rounded-3 shadow-lg mb-4" alt="ProjectionPathExplorer Screenshot" width="700" height="500" loading="lazy" />
                 </div>
             </div>
-
         </div>
     );
 }

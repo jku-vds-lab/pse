@@ -1,8 +1,12 @@
 import Hero from '../components/Hero';
+import DevelopedBy from '../components/DevelopedBy';
 
 function HomePage() {
   return (
-    <Hero />
+    <div>
+      <Hero />
+      <DevelopedBy />
+    </div>
   );
 }
 
