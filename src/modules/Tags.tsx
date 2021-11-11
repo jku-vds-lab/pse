@@ -3,7 +3,7 @@ export enum TagsColorsIndex {
   "tabular", "graph",
   "temporal", "groups", "clusters",
   "games", "medicine", "science",
-  "MDS", "PCA", "t-SNE",
+  "MDS", "PCA", "t-SNE", "UMAP",
   "single-run", "multiple-runs", "same-origins", "different-origins",
   "progressing", "stagnating", "oscillation", "intersections", "sparse", "dense", "regular", "irregular",
   "cluster", "transition", "cycle", "U-turn", "outlier", "alternation",
