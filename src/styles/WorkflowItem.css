@@ -1,22 +1,8 @@
 /* The animation code */
-@keyframes showIconsData {
+@keyframes showIcon {
     0%   {font-size: 0;}
-    10%   {font-size: 2.5rem;}
-    15%   {font-size: 2rem;}
-    100%   {font-size: 2rem;}
-  }
-
-  @keyframes showIconsReduction {
-    0%   {font-size: 0}
-    10%   {font-size: 2.5rem;}
-    15%   {font-size: 2rem;}
-    100%   {font-size: 2rem;}
-  }
-
-  @keyframes showIconsResults {
-    0%   {font-size: 0;}
-    10%   {font-size: 2.5rem;}
-    15%   {font-size: 2rem;}
+    8%   {font-size: 2.3rem;}
+    12%   {font-size: 2rem;}
     100%   {font-size: 2rem;}
   }
 
@@ -25,25 +11,25 @@
   }
 
   .workflow-icon-data {
-    animation-name: showIconsData;
+    animation-name: showIcon;
     animation-delay: 0.5s;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }
   
   .workflow-icon-reduction {
-    animation-name: showIconsReduction;
+    animation-name: showIcon;
     animation-delay: 2.5s;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }
   
   .workflow-icon-results {
-    animation-name: showIconsResults;
+    animation-name: showIcon;
     animation-delay: 4.5s;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }

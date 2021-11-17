@@ -11,7 +11,7 @@ interface IWorkflowItemProps {
 }
 function WorkflowItem(props: IWorkflowItemProps) {
     return (
-        <div style={{ flex: "1" }}>
+        <div>
             <div style={{height: "2rem"}} className="mb-2">
             <FontAwesomeIcon id={`workflow-icon-${props.id}`} icon={props.icon} size="2x" className={`workflow-icon text-center`}/>
             </div>

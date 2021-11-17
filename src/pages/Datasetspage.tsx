@@ -5,10 +5,6 @@ import DatasetsCard from '../components/DatasetsCard';
 import { datasets } from '../data/datasets';
 import {TagsColorsIndex} from '../modules/Tags';
 
-const intersectArrays = (array1: any, array2: any) => {
-  return array1.filter((value: any) => array2.includes(value));
-}
-
 // Could be used if we want another filtering technique
 const checkSubsetArrays = (array1: any, array2: any) => {
   return array1.every((val: any) => array2.includes(val));
@@ -27,14 +23,13 @@ const options = tagList.map((tag) => ({value: tag, label: tag}))
 function DatasetsPage() {
   const [selectedOptions, setSelectedOptions] = React.useState();
   const [selectedFilter, setselectedFilter] = React.useState([]);
-  console.log(selectedFilter)
   
   return (
     <div>
       <Select
       className={"container w-50 mt-5"}
       value={selectedOptions}
-      placeholder={"Select tags to filter datasets..."}
+      placeholder={"Filter datasets by tags ..."}
       closeMenuOnSelect={false}
       components={animatedComponents}
       isMulti
@@ -45,11 +40,7 @@ function DatasetsPage() {
       }}
     />
       <div className="mt-5 d-flex flex-row justify-content-around flex-wrap">
-        {datasets.map((dataset) => {
-          if (checkSubsetArrays(selectedFilter, dataset.tags)) {
-            return <DatasetsCard key={dataset.id} datasetInfo={dataset} />
-          }
-        })}
+        {datasets.filter((dataset) => checkSubsetArrays(selectedFilter, dataset.tags)).map((dataset) => <DatasetsCard key={dataset.id} datasetInfo={dataset} />)}
 
       </div>
     </div>
