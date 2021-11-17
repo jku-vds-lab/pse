@@ -3,46 +3,47 @@
     0%   {font-size: 0;}
     10%   {font-size: 2.5rem;}
     15%   {font-size: 2rem;}
-    90%   {font-size: 2rem;}
-    95%   {font-size: 0;}
-    100%   {font-size: 0;}
+    100%   {font-size: 2rem;}
   }
 
   @keyframes showIconsReduction {
     0%   {font-size: 0}
     10%   {font-size: 2.5rem;}
     15%   {font-size: 2rem;}
-    65%   {font-size: 2rem;}
-    70%   {font-size: 0;}
-    100%   {font-size: 0;}
+    100%   {font-size: 2rem;}
   }
 
   @keyframes showIconsResults {
     0%   {font-size: 0;}
     10%   {font-size: 2.5rem;}
     15%   {font-size: 2rem;}
-    40%   {font-size: 2rem;}
-    45%   {font-size: 0;}
-    100%   {font-size: 0;}
+    100%   {font-size: 2rem;}
   }
-  
+
   .workflow-icon {
     font-size: 0;
-    animation-duration: 8s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
   }
 
   .workflow-icon-data {
     animation-name: showIconsData;
+    animation-delay: 0.5s;
+    animation-duration: 8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
   }
   
   .workflow-icon-reduction {
     animation-name: showIconsReduction;
-    animation-delay: 2s;
+    animation-delay: 2.5s;
+    animation-duration: 8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
   }
   
   .workflow-icon-results {
     animation-name: showIconsResults;
-    animation-delay: 4s;
+    animation-delay: 4.5s;
+    animation-duration: 8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
   }
