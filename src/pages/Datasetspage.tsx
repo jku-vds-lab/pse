@@ -3,7 +3,7 @@ import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import DatasetsCard from '../components/DatasetsCard';
 import { datasets } from '../data/datasets';
-import {TagsColorsIndex} from '../modules/Tags';
+import {TagsColorEnum} from '../modules/Tags';
 
 // Could be used if we want another filtering technique
 const checkSubsetArrays = (array1: any, array2: any) => {
@@ -13,7 +13,7 @@ const checkSubsetArrays = (array1: any, array2: any) => {
 const animatedComponents = makeAnimated();
 
 // prepare list of tags
-const tagList = Object.keys(TagsColorsIndex).filter((item) => {
+const tagList = Object.keys(TagsColorEnum).filter((item) => {
   return isNaN(Number(item));
 });
 

@@ -1,5 +1,5 @@
 import '../styles/DatasetsCard.css';
-import { TagsColorsIndex, tagColors } from '../modules/Tags';
+import { TagsColorEnum } from '../modules/Tags';
 
 interface IDatasetCardProps {
   datasetInfo: IDatasetInfo
@@ -19,15 +19,19 @@ function DatasetsCard(props: IDatasetCardProps) {
   const datasetImage = require(`../assets/datasetImages/${props.datasetInfo.imagePath}`).default;
 
   return (
-    <div className="card dataset-card mb-5 ms-3 me-3">
+    <div className="card dataset-card mb-5">
       <img src={datasetImage} alt={props.datasetInfo.name} className="card-img-top" />
       <div className="card-body">
         <h5 className="card-title">{props.datasetInfo.name}</h5>
         <p className="card-text">{props.datasetInfo.description}</p>
+        <div className="mb-3">
         {props.datasetInfo.datasetLinks &&
-        Object.entries(props.datasetInfo.datasetLinks).map(([key, value]) => <a key={key} href={String(value)} className="card-link">{key}</a>)
+          Object.entries(props.datasetInfo.datasetLinks).map(([key, value]) => <a key={key} href={String(value)} className="card-link">{key}</a>)
         }
-        {props.datasetInfo.tags.map((tag: string, idx: number) => <span key={idx} className={`badge rounded-pill me-2 bg-${tagColors[TagsColorsIndex[tag as keyof typeof TagsColorsIndex]]}`} >{tag}</span>)}
+        </div>
+        <div>
+          {props.datasetInfo.tags.map((tag: string, idx: number) => <span key={idx} className={`badge rounded-pill me-2 bg-${TagsColorEnum[tag as keyof typeof TagsColorEnum]} ${TagsColorEnum[tag as keyof typeof TagsColorEnum] === 'light' ? "text-dark" : ""}`} >{tag}</span>)}
+        </div>
       </div>
     </div>
   );
