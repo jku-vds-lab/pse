@@ -8,12 +8,12 @@ export const datasets = [
         "tags": ["numerical", "tabular", "temporal", "games", "t-SNE", "Euclidean distance", "single-run", "multiple-runs", "same-origins", "different-origins", "progressing", "oscillation", "intersections", "regular", "cluster", "cycle", "U-turn", "dense intermediate points", "dense end points", "bundles", "similar-shapes"],
         "imagePath": "rubik.png",
         "datasetLinks": {
-            "1x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer/?set=neural",
-            "1x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer/?set=neural",
-            "10x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer/?set=neural",
-            "10x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer/?set=neural",
-            "100x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer/?set=neural",
-            "100x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer/?set=neural"
+            "1x2 Different Origins": "#",
+            "1x2 Same Origins": "#",
+            "10x2 Different Origins": "#",
+            "10x2 Same Origins": "#",
+            "100x2 Different Origins": "#",
+            "100x2 Same Origins": "#"
         }
     },
     {
@@ -21,9 +21,15 @@ export const datasets = [
         "domain": "Games",
         "id": "chess",
         "type": "",
-        "description": "",
-        "tags": [""],
-        "imagePath": "chess.png"
+        "description": "This use case targets the analysis of professional chess games downloaded from the KingBase chess database. As hobby chess players and inspired by the popular TV series The Queen’s Gambit, we are eager to learn more about how professional players open their games and what influence openings have on the strategy, progression, and outcome of the games. To prepare the dataset, we parsed the raw data files that are provided in the PGN format using the chess module of the pgn2gif Python package. The resulting sequences of chessboard states are encoded in 64 categorical attributes— each representing a square on the chessboard. There are 13 categories in total: six for the different black pieces, six for the different white pieces, and one for empty squares. A chessboard is organized in ranks (rows) and files (columns) with the identifiers 1 to 8 and a to h, respectively. The white player’s perspective defines the order of these identifiers. Letters go from left to right, and 1 is closest to the player. As a preprocessing step, we projected the data using t-SNE with a learning rate of 100 and a perplexity value of 50.",
+        "tags": ["categorical", "tabular", "temporal", "groups", "games", "t-SNE", "multiple-runs", "same-origins", "progressing", "dense", "regular", "cluster", "transition", "U-turn", "dense starting points", "dense intermediate points", "bundles", "similar shapes"],
+        "imagePath": "chess.png",
+        "datasetLinks": {
+            "190 Games": "#",
+            "450 Games": "#",
+            "450 Games (Groups)": "#",
+            "AlphaZero vs Stockfish": "#"
+        }
     },
     {
         "name": "Go",
