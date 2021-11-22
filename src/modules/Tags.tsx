@@ -6,7 +6,7 @@ export enum TagsColorEnum {
   "graph" = "primary",
   "temporal" = "secondary",
   "groups" = "secondary",
-  "clusters" = "secondary",
+  "group-to-group relationships" = "secondary",
   "games" = "success",
   "medicine" = "success",
   "science" = "success",

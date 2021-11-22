@@ -40,6 +40,11 @@ function Footer() {
                   Publications
                 </Link>
               </p>
+              <p>
+                <a href='https://github.com/jku-vds-lab/projection-space-explorer'>
+                  Github repository
+                </a>
+              </p>
 
             </div>
 
