@@ -41,7 +41,7 @@ function DatasetsCard(props: IDatasetCardProps) {
           </button>
           <div className="mb-3">
             {props.datasetInfo.datasetLinks &&
-              Object.entries(props.datasetInfo.datasetLinks).map(([key, value]) => <a key={key} href={String(value)} className="card-link">{key}</a>)
+              Object.entries(props.datasetInfo.datasetLinks).map(([key, value]) => <a key={key} href={String(value)} className={`card-link ${key === 'Data files' ? "link-info" : "link-secondary"}`}>{key}</a>)
             }
           </div>
           <div>
