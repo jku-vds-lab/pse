@@ -9,13 +9,13 @@ export const datasets = [
         "tags": ["categorical", "tabular", "temporal", "games", "t-SNE", "Euclidean distance", "single-run", "multiple-runs", "same-origins", "different-origins", "progressing", "oscillation", "intersections", "regular", "cluster", "cycle", "U-turn", "dense intermediate points", "dense end points", "bundles", "similar shapes"],
         "imagePath": "rubik.png",
         "datasetLinks": {
-            "1x2 Different Origins": "#", 
-            "1x2 Same Origins": "#",
-            "10x2 Different Origins": "#",
-            "10x2 Same Origins": "#",
-            "100x2 Different Origins": "#",
-            "100x2 Same Origins": "#",
-            "Rubik's cube data": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/rubik"
+            "1x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube1x2_different_origins.csv", 
+            "1x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube1x2.csv",
+            "10x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube10x2_different_origins.csv",
+            "10x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube10x2.csv",
+            "100x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube100x2_different_origins.csv",
+            "100x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube100x2.csv",
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/rubik"
         }
     },
     {
@@ -28,11 +28,11 @@ export const datasets = [
         "tags": ["categorical", "tabular", "temporal", "groups", "games", "t-SNE", "multiple-runs", "same-origins", "progressing", "dense", "regular", "cluster", "transition", "U-turn", "dense starting points", "dense intermediate points", "bundles", "similar shapes"],
         "imagePath": "chess.png",
         "datasetLinks": {
-            "190 Games": "#",
-            "450 Games": "#",
-            "450 Games (Groups)": "#",
-            "AlphaZero vs Stockfish": "#",
-            "Chess data": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/chess"
+            "190 Games": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess16k.csv",
+            "450 Games": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess40k.csv",
+            "450 Games (Groups)": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess40k_groups.json",
+            "AlphaZero vs Stockfish": "https://jku-vds-lab.at/projection-space-explorer?set=chess/alphazero.csv",
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/chess"
         }
     },
     {
@@ -45,11 +45,11 @@ export const datasets = [
         "tags": ["numerical", "tabular", "temporal", "science", "PCA", "t-SNE",  "Euclidean distance", "multiple-runs", "same-origins", "different-origins", "progressing", "oscillation", "dense", "regular", "transition", "U-turn", "dense starting points", "bundles", "bundles with different velocities", "similar shapes"],
         "imagePath": "nn.png",
         "datasetLinks": {
-            "Rnd Weights": "#",
-            "Rnd Confusion Matrix": "#",
-            "Weights": "#",
-            "Confusion Matrix": "#",
-            "Neural Network data": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/neural"
+            "Rnd Weights": "https://jku-vds-lab.at/projection-space-explorer?set=neural/random_weights.csv",
+            "Rnd Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer?set=neural/random_confmat.csv",
+            "Weights": "https://jku-vds-lab.at/projection-space-explorer?set=neural/learning_weights.csv",
+            "Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer?set=neural/learning_confmat.csv",
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/neural"
         }
     },
     {
@@ -62,9 +62,9 @@ export const datasets = [
         "tags": ["numerical", "categorical", "tabular", "groups", "group-to-group relationships", "medicine", "UMAP", "cluster"],
         "imagePath": "cancer.png",
         "datasetLinks": {
-            "TCGA Sub-Sampled": "#",
-            "TCGA Lung, Colorectal, and Pancreatic Cancer": "#",
-            "TCGA data": "https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga"
+            "TCGA Sub-Sampled (TODO)": "#",
+            "TCGA Lung, Colorectal, and Pancreatic Cancer (TODO)": "#",
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/coral"
         }
     },
     {
@@ -77,10 +77,10 @@ export const datasets = [
         "tags": ["categorical", "tabular", "temporal", "games", "multiple-runs", "different-origins", "progressing", "dense", "regular", "cluster", "transition", "dense starting points", "sparse intermediate points", "sparse end points", "bundles", "similar shapes"],
         "imagePath": "go.png",
         "datasetLinks": {
-            "State features": "#",
-            "Histogram features": "#",
-            "Move features (wavelet)": "#",
-            "Go data": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/go"
+            "State features": "https://jku-vds-lab.at/projection-space-explorer?set=go/combined.csv",
+            "Histogram features": "https://jku-vds-lab.at/projection-space-explorer?set=go/histogram.csv",
+            "Move features (wavelet)": "https://jku-vds-lab.at/projection-space-explorer?set=go/move_wavelet.csv",
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/go"
         }
     },
     {
