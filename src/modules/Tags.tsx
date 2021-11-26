@@ -1,3 +1,4 @@
+
 export enum TagsColorEnum {
   "numerical" = "primary",
   "categorical" = "primary",
@@ -44,4 +45,15 @@ export enum TagsColorEnum {
   "bundles with different directions" = "dark",
   "bundles with different velocities" = "dark",
   "similar shapes" = "dark"
+}
+
+export enum ColorToCategory {
+  "primary" = "dataset properties",
+  "secondary" = "relations of data itmes",
+  "success" = "domain",
+  "danger" = "projection methods",
+  "warning" = "Single- or Multi-session investigation",
+  "info" = "characteristics of projection paths",
+  "light" = "patterns within curves",
+  "dark" = "patterns between curves"
 }
