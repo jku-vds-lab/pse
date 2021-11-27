@@ -13,23 +13,23 @@
   .workflow-icon-data {
     animation-name: showIcon;
     animation-delay: 0.5s;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }
   
   .workflow-icon-reduction {
     animation-name: showIcon;
-    animation-delay: 2.5s;
-    animation-duration: 5s;
+    animation-delay: 1.5s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }
   
   .workflow-icon-results {
     animation-name: showIcon;
-    animation-delay: 4.5s;
-    animation-duration: 5s;
+    animation-delay: 2.5s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }
