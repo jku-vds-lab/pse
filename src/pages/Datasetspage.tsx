@@ -3,48 +3,46 @@ import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import DatasetsCard from '../components/DatasetsCard';
 import { datasets } from '../data/datasets';
-import { TagsColorEnum, ColorToCategory } from '../modules/Tags';
+import { tagToCategoryEnum, categoryToColorEnum } from '../modules/Tags';
+
 const animatedComponents = makeAnimated();
 
-// Could be used if we want another filtering technique
-const checkSubsetArrays = (array1: any, array2: any) => {
-  return array1.every((val: any) => array2.includes(val));
+interface ITagOptions {
+  value: string,
+  label: string
+}
+
+interface ISelectOptions {
+  label: string,
+  options: ITagOptions[]
+}
+
+// check if one array is a subst of another array
+const checkSubsetArrays = (array1: string[], array2: string[]) => {
+  return array1.every((val: string) => array2.includes(val));
 }
 
 // get list of categories of tags
-const categoryList = Object.values(ColorToCategory).filter((item) => {
-  return isNaN(Number(item));
-});
-
-const colorList = Object.keys(ColorToCategory).filter((item) => {
+const categoryList = Object.keys(categoryToColorEnum).filter((item) => {
   return isNaN(Number(item));
 });
 
 // prepare list of tags
-const tagList = Object.keys(TagsColorEnum).filter((item) => {
+const tagList = Object.keys(tagToCategoryEnum).filter((item) => {
   return isNaN(Number(item));
 });
 
-// prepare options for selection (could be optimized in the future)
-const options = categoryList.map((cat): {label: string, options: any[]} => ({label: cat, options: []}));
-tagList.forEach((tag) => {
-  colorList.forEach((color) => {
-    if (TagsColorEnum[tag as keyof typeof TagsColorEnum] === color) {
-      const cat = ColorToCategory[color as keyof typeof ColorToCategory];
-      options.forEach((optionCat) => {
-        if (optionCat.label === cat) {
-          optionCat.options.push({ value: tag, label: tag })
-        }
-      })
-    }
-  })
+// prepare options for selection
+const options = categoryList.map((cat): ISelectOptions => {
+  // get all tags that have this category
+  const tags = tagList.filter((tag) => tagToCategoryEnum[tag as keyof typeof tagToCategoryEnum] === cat);
+  const tagOptions = tags.map((tag): ITagOptions => ({ value: tag, label: tag }));
+  return {label: cat, options: tagOptions};
 })
-//const options = tagList.map((tag) => ({ value: tag, label: tag }))
 
 function DatasetsPage() {
-  console.log(options)
-  const [selectedOptions, setSelectedOptions] = React.useState();
-  const [selectedFilter, setselectedFilter] = React.useState([]);
+  const [selectedOptions, setSelectedOptions] = React.useState<ITagOptions[]>();
+  const [selectedFilter, setselectedFilter] = React.useState<string[]>([]);
 
   return (
     <div>
@@ -56,9 +54,9 @@ function DatasetsPage() {
         components={animatedComponents}
         isMulti
         options={options}
-        onChange={(selection: any) => {
-          setSelectedOptions(selection)
-          setselectedFilter(selection.map((option: any) => option.value))
+        onChange={(selection) => {
+          setSelectedOptions(selection as ITagOptions[])
+          setselectedFilter((selection as ITagOptions[]).map((option: ITagOptions) => option.value))
         }}
       />
       <div className="mt-5 ms-3 me-3 row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 g-4">

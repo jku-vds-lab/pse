@@ -1,4 +1,4 @@
-import { TagsColorEnum } from '../modules/Tags';
+import { tagToCategoryEnum, categoryToColorEnum } from '../modules/Tags';
 import { useState } from 'react';
 
 interface IDatasetCardProps {
@@ -7,6 +7,7 @@ interface IDatasetCardProps {
 
 interface IDatasetInfo {
   name: string;
+  domain: string;
   id: string;
   type: string;
   primaryDescription: string;
@@ -45,7 +46,7 @@ function DatasetsCard(props: IDatasetCardProps) {
             }
           </div>
           <div>
-            {props.datasetInfo.tags.map((tag: string, idx: number) => <span key={idx} className={`badge rounded-pill me-2 bg-${TagsColorEnum[tag as keyof typeof TagsColorEnum]} ${TagsColorEnum[tag as keyof typeof TagsColorEnum] === 'light' ? "text-dark" : ""}`} >{tag}</span>)}
+            {props.datasetInfo.tags.map((tag: string, idx: number) => <span key={idx} className={`badge rounded-pill me-2 bg-${categoryToColorEnum[tagToCategoryEnum[tag as keyof typeof tagToCategoryEnum]]} ${categoryToColorEnum[tagToCategoryEnum[tag as keyof typeof tagToCategoryEnum]] === 'light' ? "text-dark" : ""}`} >{tag}</span>)}
           </div>
         </div>
       </div>
