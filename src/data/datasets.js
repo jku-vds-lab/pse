@@ -72,8 +72,8 @@ export const datasets = [
         "domain": "Games",
         "id": "go",
         "type": "temporal",
-        "primaryDescription": "",
-        "secondaryDescription": "TODO: Add description when available!",
+        "primaryDescription": "Go is an abstract strategy board game for two players in which the aim is to surround more territory than the opponent. The game was invented in China more than 2,500 years ago and is believed to be the oldest board game continuously played to the present day.",
+        "secondaryDescription": "TODO: Add mode description when available!",
         "tags": ["categorical", "tabular", "temporal", "games", "multiple-runs", "different-origins", "progressing", "dense", "regular", "cluster", "transition", "dense starting points", "sparse intermediate points", "sparse end points", "bundles", "similar shapes"],
         "imagePath": "go.png",
         "datasetLinks": {
@@ -84,14 +84,39 @@ export const datasets = [
         }
     },
     {
-        "name": "Interaction provenance",
+        "name": "Gapminder",
         "domain": "Visual Analytics",
-        "id": "interaction_provenance",
-        "type": "",
-        "primaryDescription": "",
-        "secondaryDescription": "TODO: Wrong picture, change when available.",
-        "tags": [""],
-        "imagePath": "rubik.png"
+        "id": "gapminder",
+        "type": "temporal",
+        "primaryDescription": "The Gapminder tool allows users to explore the development of countries over time.",
+        "secondaryDescription": "It consists of a bubble chart in which each country is represented by a colored mark. Users can interactively map attributes, such as GDP, life expectancy, and child mortality, to either one of the axes or the size of the country marks, and change the year between 1800 and 2015 with a time slider. At any time, the application state can be fully described by the following information: the timestamp of the interaction; the data attributes mapped to x-axis, y-axis, mark size, and mark color; the year selected (between 1800 and 2015); and any countries selected. For the purpose of meta-analysis, we use the sequence of application states visited by a user and display the interaction provenance.We conducted a user study with 32 participants (m: 17, f: 15). The participants were students of a Data Science master program, as part of which they attended an introductory course on data visualization. We asked participants to find answers to four tasks following the Brehmer and Munzner taxonomy  by using the Gapminder tool.",
+        "tags": ["numerical", "categorical", "tabular", "temporal", "science", "MDS", "t-SNE", "UMAP", "multiple-runs", "same-origins", "progressing", "oscillation", "intersections", "sparse", "regular","cluster", "transition", "cycle", "U-turn", "outlier", "alternation", "dense starting points", "dense intermediate points", "dense end points", "sparse end points", "bundles", "similar shapes"],
+        "imagePath": "gapminder.png",
+        "datasetLinks": {
+            "Synthetic MDS": "#",
+            "Synthetic t-SNE": "#",
+            "Synthetic t-SNE (w_num=5)": "#",
+            "Synthetic UMAP": "#",
+            "User MDS": "#",
+            "User t-SNE": "#",
+            "User UMAP": "#",
+            "Data files": "#"
+        }
+    },
+    {
+        "name": "User Intent Sessions",
+        "domain": "Visual Analytics",
+        "id": "user_intent",
+        "type": "temporal",
+        "primaryDescription": "We demonstrate the general applicability of PSE using interaction provenance data from the users’ intent study by Gadhave et al.",
+        "secondaryDescription": "They conducted a crowdsourcing user study with 130 participants, where each participant conducted five different tasks. Among these tasks, participants were asked to select outliers or data points that belong to a cluster in a scatterplot. They analyzed two conditions. In the first condition, users were computationally supported by an auto-complete feature to select e.g., the desired outliers. This feature became apparent after selecting the first data point. For the second condition, users had to accomplish the tasks manually without any computational assistance. In total, 12 different datasets were used for outlier tasks (cluster and linear) and six for cluster tasks, each with three difficulty levels (easy, medium, hard). To analyze the user behavior, we extracted the set of selected data points after each interaction. Unlike in the Gapminder example, we chose not to use this information as a simple set attribute, but instead calculate a more meaningful feature vector that concisely describes both the number and the position of all selected points.We first normalize the coordinates of all data points from the different datasets that users interacted with.We then construct a 10-by-10 grid and count the number of selected points within each grid cell. The resulting 2D histogram is flattened into a vector and the vectors are compared using the cosine similarity. This encoding ensures that point selections in similar regions of the scatterplots are close together, even if the sets of selected points do not match exactly. It also enables meaningful comparison of user selections across different datasets. For the summary visualizations, we simply show scatterplots of the selected points, with opacity encoding in how many of the analyzed states a given point is part of the selection.",
+        "tags": ["numerical", "tabular", "temporal", "science", "t-SNE", "multiple-runs", "same-origins", "progressing", "oscillation", "sparse", "regular", "cluster", "U-turn", "alternation", "dense starting points", "sparse end points", "bundles", "similar shapes"],
+        "imagePath": "user_intent.png",
+        "datasetLinks": {
+            "All Outlier + Cluster": "#",
+            "Outlier All": "#",
+            "Data files": "#"
+        }
     },
     {
         "name": "Chemical data (CIME)",
