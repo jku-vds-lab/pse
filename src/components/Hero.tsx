@@ -2,6 +2,20 @@ import { Link } from 'react-router-dom';
 import screenshot from '../assets/screenshot.png';
 
 function Hero() {
+    // This function is needed to control the modal video when closed, since Bootstrap cannot handle it alone.
+    // See also: https://stackoverflow.com/questions/8667882/how-to-pause-a-youtube-player-when-hiding-the-iframe
+    const toggleVideo = (state: string) => {
+        // if state == 'hide', hide. Else: show video
+        const div = document.getElementById("hero-video-iframe-wrapper");
+        const iframe = div?.getElementsByTagName("iframe")[0].contentWindow;
+        const newState = state === 'hide' ? 'none' : '';
+        if (div) {
+            div.style.display = newState;
+        }
+        const func = state === 'hide' ? 'pauseVideo' : 'playVideo';
+        iframe?.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+
     return (
         <div className="px-4 pt-5 my-5 text-center border-bottom shadow-sm mb-5 bg-body rounded">
             <h1 className="display-4 fw-bold">Projection Space Explorer</h1>
@@ -17,18 +31,18 @@ function Hero() {
                         Datasets
                     </Link >
 
-                    <button className="btn btn-outline-success btn-lg px-4" data-bs-toggle="modal" data-tagVideo="https://www.youtube.com/embed/zcX7OJ-L8XQ" data-bs-target="#videoModal">Video</button>
+                    <button id="hero-video-button" className="btn btn-outline-success btn-lg px-4" data-bs-toggle="modal" data-tagvideo="https://www.youtube.com/embed/0svaUdXNUCg?enablejsapi=1" data-bs-target="#videoModal" onClick={() => toggleVideo('')}>Video</button>
 
                     <div className="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="videoModalLabel" aria-hidden="true">
                         <div className="modal-dialog modal-lg">
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h5 className="modal-title">ProjectionSpaceExplorer Video</h5>
-                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button id="hero-video-close-button" type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => toggleVideo('hide')}></button>
                                 </div>
                                 <div className="modal-body">
-                                    <div className="ratio ratio-16x9">
-                                        <iframe title="video modal" src="https://www.youtube.com/embed/0svaUdXNUCg" allow="autoplay;" allowFullScreen></iframe>
+                                    <div id="hero-video-iframe-wrapper" className="ratio ratio-16x9">
+                                        <iframe title="video modal" src="https://www.youtube.com/embed/0svaUdXNUCg?enablejsapi=1" allow="autoplay;" allowFullScreen></iframe>
                                     </div>
                                 </div>
                             </div>
