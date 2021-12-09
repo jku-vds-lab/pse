@@ -59,7 +59,7 @@ export const datasets = [
         "type": "scatter",
         "primaryDescription": "This use case is motivated by a recent New York Times article that features a new generation of drugs for cancer treatment, targeting the KRAS gene.",
         "secondaryDescription": "Mutations of KRAS can lead to uncontrolled cell growth, i.e., cancer. In fact, KRAS mutations are one of the most frequent mutations found in cancer tissue samples. One particular mutation of this gene, Gly12Cys, is highly prevalent in lung, colorectal, and pancreatic cancer. With the new therapy, the cell growth caused by the mutated KRAS gene can be prevented, even causing cancers to shrink. Based on these advances, we want to investigate genomics data from The Cancer Genome Atlas  that we previously already worked with . The dataset contains data extracted from tumor samples and includes meta-data such as the age and gender of the patients, gene expression, mutation, and copy number data (745 attributes in total). For the purpose of this use case, we extracted data for the three aforementioned tumor types from the Ordino application, resulting in 1238 tissue samples. The goal of this analysis is to determine the prevalence of KRAS mutations, specifically Gly12Cys. Within the scope of this paper, we also investigate the expression of tumor-related genes and how they relate to different tumor types.",
-        "tags": ["numerical", "categorical", "tabular", "groups", "group-to-group relationships", "medicine", "UMAP", "cluster"],
+        "tags": ["numerical", "categorical", "tabular", "scatter", "groups", "group-to-group relationships", "medicine", "UMAP", "cluster"],
         "imagePath": "cancer.png",
         "datasetLinks": {
             "TCGA Sub-Sampled (TODO)": "#",
@@ -122,11 +122,15 @@ export const datasets = [
         "name": "Chemical data (CIME)",
         "domain": "Chemistry",
         "id": "chemical_data_cime",
-        "type": "",
-        "primaryDescription": "",
-        "secondaryDescription": "TODO",
-        "tags": [""],
-        "imagePath": "cime.png"
+        "type": "scatter",
+        "primaryDescription": "The ChemInformatics Model Explorer (short CIME) extension of the Projection Space Explorer allows users to interactively explore a fixed subspace of chemical compounds.",
+        "secondaryDescription": "Users can apply a 2D projection to the provided data, and additionally show the high-dimensional data in a LineUp table. Furthermore, users can select data points and show the 2D compound structures of all selected items, aligned to each other, in a side-view. If provided in the data, users can change the representation in the side-view to show atom-level attributions in the 2D compound structure. This could be used for comparing neighbors for example to check if machine learning model explanations - generated for those data points - make sense. Using the grouping tool allows for easier interaction with item neighborhoods.",
+        "tags": ["SDF", "scatter", "medicine", "UMAP", "cluster"],
+        "imagePath": "cime.png",
+        "datasetLinks": {
+            "test": "https://cime-demo.caleydoapp.org/",
+            "Data files": ""
+        }
     }
 
 ]

@@ -14,10 +14,12 @@ export enum tagToCategoryEnum {
   "numerical" = "dataset properties",
   "categorical" = "dataset properties",
   "boolean" = "dataset properties",
+  "SDF" = "dataset properties",
   "tabular" = "dataset properties",
   "graph" = "dataset properties",
 
   "temporal" = "relations of data itmes",
+  "scatter" = "relations of data itmes",
   "groups" = "relations of data itmes",
   "group-to-group relationships" = "relations of data itmes",
 
