@@ -21,7 +21,7 @@ function Hero() {
             <h1 className="display-4 fw-bold">Projection Space Explorer</h1>
             <div className="col-lg-6 mx-auto">
                 <p className="lead mb-4">
-                    The ProjectionPathExplorer visualization prototype allows exploration of patterns in decision-making
+                    The ProjectionSpaceExplorer visualization prototype allows exploration of patterns in decision-making
                     paths. Multiple series of high dimensional states are visualized as trajectories through a joint embedding
                     space.
                 </p>
