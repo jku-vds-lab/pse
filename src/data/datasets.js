@@ -15,7 +15,8 @@ export const datasets = [
             "10x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube10x2.csv",
             "100x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube100x2_different_origins.csv",
             "100x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube100x2.csv",
-            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/rubik"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/rubik",
+            "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
     },
     {
@@ -32,7 +33,8 @@ export const datasets = [
             "450 Games": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess40k.csv",
             "450 Games (Groups)": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess40k_groups.json",
             "AlphaZero vs Stockfish": "https://jku-vds-lab.at/projection-space-explorer?set=chess/alphazero.csv",
-            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/chess"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/chess",
+            "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
     },
     {
@@ -49,7 +51,8 @@ export const datasets = [
             "Rnd Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer?set=neural/random_confmat.csv",
             "Weights": "https://jku-vds-lab.at/projection-space-explorer?set=neural/learning_weights.csv",
             "Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer?set=neural/learning_confmat.csv",
-            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/neural"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/neural",
+            "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
     },
     {
@@ -64,7 +67,8 @@ export const datasets = [
         "datasetLinks": {
             "TCGA Sub-Sampled (TODO)": "#",
             "TCGA Lung, Colorectal, and Pancreatic Cancer (TODO)": "#",
-            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/coral"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/coral",
+            "paper link": "https://jku-vds-lab.at/publications/2021_preprint_multilevel-embedding/"
         }
     },
     {
@@ -100,7 +104,8 @@ export const datasets = [
             "User MDS": "#",
             "User t-SNE": "#",
             "User UMAP": "#",
-            "Data files": "#"
+            "Data files": "#",
+            "paper link": "https://jku-vds-lab.at/publications/2020_preprint_provectories/"
         }
     },
     {
@@ -115,7 +120,8 @@ export const datasets = [
         "datasetLinks": {
             "All Outlier + Cluster": "#",
             "Outlier All": "#",
-            "Data files": "#"
+            "Data files": "#",
+            "paper link": "https://jku-vds-lab.at/publications/2020_preprint_provectories/"
         }
     },
     {
@@ -129,7 +135,7 @@ export const datasets = [
         "imagePath": "cime.png",
         "datasetLinks": {
             "test": "https://cime-demo.caleydoapp.org/",
-            "Data files": ""
+            "Data files": "#"
         }
     }
 

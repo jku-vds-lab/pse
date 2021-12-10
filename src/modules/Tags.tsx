@@ -10,6 +10,17 @@ export enum categoryToColorEnum {
   "patterns between curves" = "dark"
 }
 
+export enum bsColorToHex {
+  "primary" = "#0d6efd",
+  "secondary" = "#6c757d",
+  "success" = "#198754",
+  "danger" = "#dc3545",
+  "warning" = "#ffc107",
+  "info" = "#0dcaf0",
+  "light" = "#CACBCC",
+  "dark" = "#212529",
+}
+
 export enum tagToCategoryEnum {
   "numerical" = "dataset properties",
   "categorical" = "dataset properties",

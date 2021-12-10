@@ -21,9 +21,7 @@ function Hero() {
             <h1 className="display-4 fw-bold">Projection Space Explorer</h1>
             <div className="col-lg-6 mx-auto">
                 <p className="lead mb-4">
-                    The ProjectionSpaceExplorer visualization prototype allows exploration of patterns in decision-making
-                    paths. Multiple series of high dimensional states are visualized as trajectories through a joint embedding
-                    space.
+                    The Projection Space Explorer visualization prototype is an interactive approach for the exploration and formation of structural relationships in embeddings of high-dimensional data.
                 </p>
                 <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                     <a className="btn btn-primary btn-lg px-4 me-sm-3" type="button" href="https://jku-vds-lab.at/projection-space-explorer/?set=neural">Start Application</a>

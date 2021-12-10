@@ -1,15 +1,17 @@
 import React from 'react';
-import Select from 'react-select';
+import Select, { StylesConfig } from 'react-select';
+import chroma from 'chroma-js';
 import makeAnimated from 'react-select/animated';
 import DatasetsCard from '../components/DatasetsCard';
 import { datasets } from '../data/datasets';
-import { tagToCategoryEnum, categoryToColorEnum } from '../modules/Tags';
+import { tagToCategoryEnum, categoryToColorEnum, bsColorToHex } from '../modules/Tags';
 
 const animatedComponents = makeAnimated();
 
 interface ITagOptions {
   value: string,
-  label: string
+  label: string,
+  color: string
 }
 
 interface ISelectOptions {
@@ -33,12 +35,61 @@ const tagList = Object.keys(tagToCategoryEnum).filter((item) => {
 });
 
 // prepare options for selection
-const options = categoryList.map((cat): ISelectOptions => {
+const options = categoryList.map((cat: string): ISelectOptions => {
   // get all tags that have this category
   const tags = tagList.filter((tag) => tagToCategoryEnum[tag as keyof typeof tagToCategoryEnum] === cat);
-  const tagOptions = tags.map((tag): ITagOptions => ({ value: tag, label: tag }));
+  // get color of those tags
+  const color = bsColorToHex[categoryToColorEnum[cat as keyof typeof categoryToColorEnum]]
+  const tagOptions = tags.map((tag): ITagOptions => ({ value: tag, label: tag, color: color }));
   return {label: cat, options: tagOptions};
 })
+
+const colourStyles: StylesConfig<any, true> = {
+  control: (styles) => ({ ...styles, backgroundColor: 'white' }),
+  option: (styles, { data, isFocused, isSelected }) => {
+    const color = chroma(data.color);
+    return {
+      ...styles,
+      backgroundColor: isSelected
+        ? data.color
+        : isFocused
+        ? color.alpha(0.1).css()
+        : undefined,
+      color: isSelected
+        ? chroma.contrast(color, 'white') > 2
+          ? 'white'
+          : 'black'
+        : data.color,
+
+      ':active': {
+        ...styles[':active'],
+        backgroundColor:
+          isSelected
+            ? data.color
+            : color.alpha(0.3).css(),
+      },
+    };
+  },
+  multiValue: (styles, { data }) => {
+    const color = chroma(data.color);
+    return {
+      ...styles,
+      backgroundColor: color.alpha(0.1).css(),
+    };
+  },
+  multiValueLabel: (styles, { data }) => ({
+    ...styles,
+    color: data.color,
+  }),
+  multiValueRemove: (styles, { data }) => ({
+    ...styles,
+    color: data.color,
+    ':hover': {
+      backgroundColor: data.color,
+      color: 'white',
+    },
+  }),
+};
 
 function DatasetsPage() {
   const [selectedOptions, setSelectedOptions] = React.useState<ITagOptions[]>();
@@ -46,6 +97,10 @@ function DatasetsPage() {
 
   return (
     <div>
+      <div className='container text-center mt-3'>
+      <h1 className='display-6'>Dataset Overview</h1>
+      <p className='mt-3 lead'>On this page you can explore the different datastes and use-cases available in the Projection Space Explorer. Each card contains links to the example dataset in the application, as well as links to the data files and to the paper where the use case is presented, if available. Also each card contains tags, that describe the properties of the dataset and characteristics and patterns that emerge in the embedding space. You can filter for datasets by tags or by search terms in the searchbox below. The meaning of the colors of tags is described in the legend on the right.</p>
+      </div>
       <Select
         className={"container w-50 mt-5"}
         value={selectedOptions}
@@ -54,6 +109,7 @@ function DatasetsPage() {
         components={animatedComponents}
         isMulti
         options={options}
+        styles={colourStyles}
         onChange={(selection) => {
           setSelectedOptions(selection as ITagOptions[])
           setselectedFilter((selection as ITagOptions[]).map((option: ITagOptions) => option.value))
