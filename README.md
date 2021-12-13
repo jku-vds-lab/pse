@@ -5,6 +5,20 @@ In a recent publication, we introduced ProjectionPathExplorer [1], an interactiv
 
 1. Hinterreiter, Andreas, Christian Steinparz, Moritz Schöfl, Holger Stitz, and Marc Streit. 2021. “ProjectionPathExplorer: Exploring Visual Patterns in Projected Decision-Making Paths.” ACM Transactions on Interactive Intelligent Systems. Special Issue on "Interactive Visual Analytics for Making Explainable and Accountable Decisions" (To be published): 1-30. https://arxiv.org/abs/2001.08372 .
 
+## Link to certain dataset cards via URL
+In order to link directly to a subset of dataset cards, one has to specify the dataset ids in the URL. The ids can be found in the `dataset.js` file.
+the ids have to given in the URL after the `datasets/` and separated by the `&` character.
+Here are some examples to clarify this.
+
+### Showing all dataset cards:
+`.../datasets/all`
+
+### Showing the cohort analysis data:
+`.../datasets/cohort_analysis`
+
+### Showing the rubik's cube and chess datasets:
+`.../datasets/rubik&chess`
+
 ## Start Applicatiion
 
 ### `npm start`
