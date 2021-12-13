@@ -31,7 +31,7 @@ function Footer() {
                 Useful links
               </h6>
               <p>
-                <Link to='/datasets'>
+                <Link to='/datasets/all'>
                   Datasets
                 </Link>
               </p>
