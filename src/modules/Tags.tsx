@@ -16,8 +16,8 @@ export enum bsColorToHex {
   "success" = "#198754",
   "danger" = "#dc3545",
   "warning" = "#ffc107",
-  "info" = "#0dcaf0",
-  "light" = "#CACBCC",
+  "info" = "#0AACCC",
+  "light" = "#B1B2B3",
   "dark" = "#212529",
 }
 
@@ -73,7 +73,5 @@ export enum tagToCategoryEnum {
   "dense end points" = "patterns between curves",
   "sparse end points" = "patterns between curves",
   "bundles" = "patterns between curves",
-  "bundles with different directions" = "patterns between curves",
-  "bundles with different velocities" = "patterns between curves",
   "similar shapes" = "patterns between curves"
 }
