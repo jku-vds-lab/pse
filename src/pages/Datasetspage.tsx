@@ -138,6 +138,7 @@ function DatasetsPage() {
     // change filter according to url
     if (datasetIdsUrl === 'all') {
       setselectedFilter([])
+      setSelectedOptions([]);
     }
     else {
       // create list of given ids, ids are separated by &
