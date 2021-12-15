@@ -1,13 +1,13 @@
 /* The animation code */
 @keyframes showIcon {
-    0%   {font-size: 0;}
-    8%   {font-size: 2.3rem;}
-    12%   {font-size: 2rem;}
-    100%   {font-size: 2rem;}
+    0%   {height: 0;}
+    8%   {height: 5.8rem;}
+    12%   {height: 5rem;}
+    100%   {height: 5rem;}
   }
 
   .workflow-icon {
-    font-size: 0;
+    height: 0;
   }
 
   .workflow-icon-data {
