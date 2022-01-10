@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import pseIconDataset from '../assets/pse-icons/pse-icon-dataset.svg';
-import pseIconProject from '../assets/pse-icons/pse-icon-project.svg';
-import pseIconDetails from '../assets/pse-icons/pse-icon-details.svg';
+import pseIconDataset from '../assets/pse-icons/pse-icon-dataset-notext.svg';
+import pseIconProject from '../assets/pse-icons/pse-icon-project-notext.svg';
+import pseIconDetails from '../assets/pse-icons/pse-icon-details-notext.svg';
 
 import WorkflowItem from '../components/WorkflowItem';
 
