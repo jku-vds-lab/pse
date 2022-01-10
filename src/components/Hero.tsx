@@ -25,7 +25,7 @@ function Hero() {
                 </p>
                 <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                     <a className="btn btn-primary btn-lg px-4 me-sm-3" type="button" href="https://jku-vds-lab.at/projection-space-explorer/?set=neural">Start Application</a>
-                    <Link to='/datasets' className="btn btn-outline-secondary btn-lg px-4 me-sm-3">
+                    <Link to='/datasets/all' className="btn btn-outline-secondary btn-lg px-4 me-sm-3">
                         Datasets
                     </Link >
 
