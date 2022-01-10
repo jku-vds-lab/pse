@@ -155,7 +155,7 @@ function DatasetsPage() {
     <div>
       <div className='container text-center mt-3'>
         <h1 className='display-6'>Dataset Overview</h1>
-        <p className='mt-3 mb-5 lead'>On this page you can explore the different datastes and use-cases available in the Projection Space Explorer. Each card contains links to the example datasets in the application, as well as links to the data files and to the paper where the use-case is presented, if available. Also each card contains tags, that describe the properties of the dataset and characteristics and patterns that emerge in the embedding space. You can filter for datasets by tags or by their names in the searchbox below. The meaning of the colors of tags can be seen in the legend next to the serach field.</p>
+        <p className='mt-3 mb-5 lead'>On this page you can explore the different datastes and use-cases available in the Projection Space Explorer. Each card contains links to the example datasets in the application, as well as links to the data files and to the paper where the use-case is presented, if available. Also in each card are tags, that describe the properties of the dataset and characteristics and patterns that emerge in the embedding space. You can filter for datasets by tags or by their names in the searchbox below. The meaning of the colors of tags can be seen in the legend next to the serach field.</p>
       </div>
       <div className="d-grid gap-2 d-lg-flex justify-content-lg-center mb-5 container">
         <div className='col-lg-5 d-flex flex-column justify-content-center'>
