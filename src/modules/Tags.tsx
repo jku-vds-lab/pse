@@ -1,7 +1,7 @@
 
 export enum categoryToColorEnum {
   "dataset properties" = "primary",
-  "relations of data itmes" = "secondary",
+  "relations of data items" = "secondary",
   "domain" = "success",
   "projection methods" = "danger",
   "Single- or Multi-session investigation" = "warning",
@@ -11,11 +11,11 @@ export enum categoryToColorEnum {
 }
 
 export enum categoryToDescriptionEnum {
-  "dataset properties" = "Tags of this category describe properties about the dataset itself.<br/>This includes data attributes and structures.",
-  "relations of data itmes" = "Data items can have different types of relations. There can be a temporal relationship between items or none.<br/>But also groups can be defined and relationships betwenn groups and items are possible.",
+  "dataset properties" = "Tags of this category describe properties about the dataset itself.<br/>This includes data attributes and data structures.",
+  "relations of data items" = "Data items can have different types of relations. There can be a temporal relationship between items or none.<br/>But also groups can be defined and relationships betwenn groups and items are possible.",
   "domain" = "The below datasets can be distinguished into 3 domains: games, medicine & science.",
-  "projection methods" = "Tags of this category describe the applied dimensionality reduction techniche<br/>and the used distance metric, if mentioned.",
-  "Single- or Multi-session investigation" = "Single-session investigation relates to the analysis of one projection path at a time.<br/>Contrarily, in Multi-session investigation multiple paths are analysed at a time.<br/>Furthermore addiontaly tags are listed that desrbie if the trajectories have the same or different starting states.",
+  "projection methods" = "Tags of this category describe the applied dimensionality reduction technique<br/>and the used distance metric, if mentioned.",
+  "Single- or Multi-session investigation" = "Single-session investigation relates to the analysis of one projection path at a time.<br/>Contrarily, in Multi-session investigation multiple paths are analysed at once.<br/>Furthermore tags are listed that describe if the trajectories have the same or different starting states.",
   "characteristics of projection paths" = "The characteristics describe properties of projection paths on a continuous scale from a global view.<br/>They relate to the overall development of paths in the embedding space.",
   "patterns within curves" = "Patterns within time curves are discrete and recognizable small structures,<br/>that appear between points from a local view.",
   "patterns between curves" = "Patterns can not only appear within projecition paths, but also between different ones."
@@ -40,10 +40,10 @@ export enum tagToCategoryEnum {
   "tabular" = "dataset properties",
   "graph" = "dataset properties",
 
-  "temporal" = "relations of data itmes",
-  "scatter" = "relations of data itmes",
-  "groups" = "relations of data itmes",
-  "group-to-group relationships" = "relations of data itmes",
+  "temporal" = "relations of data items",
+  "scatter" = "relations of data items",
+  "groups" = "relations of data items",
+  "group-to-group relationships" = "relations of data items",
 
   "games" = "domain",
   "medicine" = "domain",
