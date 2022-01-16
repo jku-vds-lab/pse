@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import { faDatabase, faProjectDiagram, faCompressArrowsAlt } from "@fortawesome/free-solid-svg-icons";
+import pseIconDataset from '../assets/pse-icons/pse-icon-dataset-notext.svg';
+import pseIconProject from '../assets/pse-icons/pse-icon-project-notext.svg';
+import pseIconDetails from '../assets/pse-icons/pse-icon-details-notext.svg';
 
 import WorkflowItem from '../components/WorkflowItem';
 
@@ -35,9 +37,9 @@ function Workflow() {
     <div className="bg-body rounded border-bottom mb-5 text-center">
       <h3 className="display-6 text-center mb-5">How it works</h3>
       <div className="container text-center mx-auto text-muted d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <WorkflowItem id="data" icon={faDatabase} title={"Choose dataset"} description={"Choose a predefined dataset or upload your own."} />
-        <WorkflowItem id="reduction" icon={faCompressArrowsAlt} title={"Project data"} description={"Apply a projection technique of your choice."} />
-        <WorkflowItem id="results" icon={faProjectDiagram} title={"See results"} description={"See the path in the embeding space."} />
+        <WorkflowItem id="data" icon={pseIconDataset} title={"Choose dataset"} description={"Either choose a predefined dataset from the list or upload your own file."} />
+        <WorkflowItem id="reduction" icon={pseIconProject} title={"Project data"} description={"Choose the attributes for plotting or apply a dimensionality reduction technique of your choice."} />
+        <WorkflowItem id="results" icon={pseIconDetails} title={"Explore details"} description={"Explore the resulting data by hovering over points, defining groups or using clustering algorithms."} />
       </div>
     </div>
   );

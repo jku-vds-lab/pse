@@ -1,5 +1,8 @@
 import { tagToCategoryEnum, categoryToColorEnum } from '../modules/Tags';
 import { useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faBook} from "@fortawesome/free-solid-svg-icons";
 
 interface IDatasetCardProps {
   datasetInfo: IDatasetInfo
@@ -20,7 +23,7 @@ interface IDatasetInfo {
 
 function DatasetsCard(props: IDatasetCardProps) {
   const [collapseButton, setcollapseButton] = useState("Show more");
-  const datasetImage = require(`../assets/datasetImages/${props.datasetInfo.imagePath}`).default;
+  const datasetImage = require(`../assets/datasetImages/${props.datasetInfo.imagePath}`);
 
   return (
     <div className="col">
@@ -42,9 +45,23 @@ function DatasetsCard(props: IDatasetCardProps) {
           </button>
           <div className="mb-3">
             {props.datasetInfo.datasetLinks &&
-              Object.entries(props.datasetInfo.datasetLinks).map(([key, value]) => <a key={key} href={String(value)} className={`card-link ${key === 'Data files' ? "link-info" : "link-secondary"}`}>{key}</a>)
-            }
+              Object.entries(props.datasetInfo.datasetLinks).map(([key, value]) => {
+                if (key === 'Data files') {
+                  return (<a key={key} href={String(value)} className="card-link link-secondary">
+                    <FontAwesomeIcon icon={faGithub} size="lg" />
+                  </a>)
+                }
+                if (key === 'paper link') {
+                  return (<a key={key} href={String(value)} className="card-link link-secondary">
+                    <FontAwesomeIcon icon={faBook} size="lg" />
+                  </a>)
+                }
+                else {
+                  return (<a key={key} href={String(value)} className="card-link link-primary">{key}</a>)
+                }
+              })}
           </div>
+
           <div>
             {props.datasetInfo.tags.map((tag: string, idx: number) => <span key={idx} className={`badge rounded-pill me-2 bg-${categoryToColorEnum[tagToCategoryEnum[tag as keyof typeof tagToCategoryEnum]]} ${categoryToColorEnum[tagToCategoryEnum[tag as keyof typeof tagToCategoryEnum]] === 'light' ? "text-dark" : ""}`} >{tag}</span>)}
           </div>

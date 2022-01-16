@@ -12,7 +12,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/datasets" component={DatasetsPage} />
+          <Route path="/datasets/:datasetIdsUrl" component={DatasetsPage} />
           <Route path="/publications" component={PublicationsPage} />
         </Switch>
         <Footer />

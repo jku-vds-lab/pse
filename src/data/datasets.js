@@ -15,7 +15,8 @@ export const datasets = [
             "10x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube10x2.csv",
             "100x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube100x2_different_origins.csv",
             "100x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube100x2.csv",
-            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/rubik"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/rubik",
+            "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
     },
     {
@@ -32,7 +33,8 @@ export const datasets = [
             "450 Games": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess40k.csv",
             "450 Games (Groups)": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess40k_groups.json",
             "AlphaZero vs Stockfish": "https://jku-vds-lab.at/projection-space-explorer?set=chess/alphazero.csv",
-            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/chess"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/chess",
+            "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
     },
     {
@@ -42,14 +44,15 @@ export const datasets = [
         "type": "temporal",
         "primaryDescription": "Deep neural networks are a class of powerful, nonlinear models that can learn complex representations of data.",
         "secondaryDescription": "They have greatly improved the state of the art in a diverse range of application domains, including computer vision, speech recognition, drug discovery, and genomics. However, the learning behavior of deep neural networks is difficult to interpret. It is usually not clear, how a certain choice of hyperparameters or a certain train/test split affect the final performance of the model. With the growing impact of deep learning on real-world decision-making, these difficulties have led to an increased demand for explainable or interpretable models. One possible way of analyzing, understanding, and communicating the processes during deep learning is visualization. The training of neural networks can be viewed as sequential steps through a high-dimensional state space. We chose two different state-space representations: a representation of the weight space and a representation of the confusion matrix. The weight representation corresponds directly to the weights learned by the network. The confusion matrix representation is more closely connected to network performance. At each epoch, we let the network classify all test instances, and construct the resulting confusion matrix.",
-        "tags": ["numerical", "tabular", "temporal", "science", "PCA", "t-SNE",  "Euclidean distance", "multiple-runs", "same-origins", "different-origins", "progressing", "oscillation", "dense", "regular", "transition", "U-turn", "dense starting points", "bundles", "bundles with different velocities", "similar shapes"],
+        "tags": ["numerical", "tabular", "temporal", "science", "PCA", "t-SNE",  "Euclidean distance", "multiple-runs", "same-origins", "different-origins", "progressing", "oscillation", "dense", "regular", "transition", "U-turn", "dense starting points", "bundles", "similar shapes"],
         "imagePath": "nn.png",
         "datasetLinks": {
             "Rnd Weights": "https://jku-vds-lab.at/projection-space-explorer?set=neural/random_weights.csv",
             "Rnd Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer?set=neural/random_confmat.csv",
             "Weights": "https://jku-vds-lab.at/projection-space-explorer?set=neural/learning_weights.csv",
             "Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer?set=neural/learning_confmat.csv",
-            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/neural"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/neural",
+            "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
     },
     {
@@ -59,12 +62,13 @@ export const datasets = [
         "type": "scatter",
         "primaryDescription": "This use case is motivated by a recent New York Times article that features a new generation of drugs for cancer treatment, targeting the KRAS gene.",
         "secondaryDescription": "Mutations of KRAS can lead to uncontrolled cell growth, i.e., cancer. In fact, KRAS mutations are one of the most frequent mutations found in cancer tissue samples. One particular mutation of this gene, Gly12Cys, is highly prevalent in lung, colorectal, and pancreatic cancer. With the new therapy, the cell growth caused by the mutated KRAS gene can be prevented, even causing cancers to shrink. Based on these advances, we want to investigate genomics data from The Cancer Genome Atlas  that we previously already worked with . The dataset contains data extracted from tumor samples and includes meta-data such as the age and gender of the patients, gene expression, mutation, and copy number data (745 attributes in total). For the purpose of this use case, we extracted data for the three aforementioned tumor types from the Ordino application, resulting in 1238 tissue samples. The goal of this analysis is to determine the prevalence of KRAS mutations, specifically Gly12Cys. Within the scope of this paper, we also investigate the expression of tumor-related genes and how they relate to different tumor types.",
-        "tags": ["numerical", "categorical", "tabular", "groups", "group-to-group relationships", "medicine", "UMAP", "cluster"],
+        "tags": ["numerical", "categorical", "tabular", "scatter", "groups", "group-to-group relationships", "medicine", "UMAP", "cluster"],
         "imagePath": "cancer.png",
         "datasetLinks": {
             "TCGA Sub-Sampled (TODO)": "#",
             "TCGA Lung, Colorectal, and Pancreatic Cancer (TODO)": "#",
-            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/coral"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/coral",
+            "paper link": "https://jku-vds-lab.at/publications/2021_preprint_multilevel-embedding/"
         }
     },
     {
@@ -100,7 +104,8 @@ export const datasets = [
             "User MDS": "#",
             "User t-SNE": "#",
             "User UMAP": "#",
-            "Data files": "#"
+            "Data files": "#",
+            "paper link": "https://jku-vds-lab.at/publications/2020_preprint_provectories/"
         }
     },
     {
@@ -115,18 +120,23 @@ export const datasets = [
         "datasetLinks": {
             "All Outlier + Cluster": "#",
             "Outlier All": "#",
-            "Data files": "#"
+            "Data files": "#",
+            "paper link": "https://jku-vds-lab.at/publications/2020_preprint_provectories/"
         }
     },
     {
         "name": "Chemical data (CIME)",
         "domain": "Chemistry",
         "id": "chemical_data_cime",
-        "type": "",
-        "primaryDescription": "",
-        "secondaryDescription": "TODO",
-        "tags": [""],
-        "imagePath": "cime.png"
+        "type": "scatter",
+        "primaryDescription": "The ChemInformatics Model Explorer (short CIME) extension of the Projection Space Explorer allows users to interactively explore a fixed subspace of chemical compounds.",
+        "secondaryDescription": "Users can apply a 2D projection to the provided data, and additionally show the high-dimensional data in a LineUp table. Furthermore, users can select data points and show the 2D compound structures of all selected items, aligned to each other, in a side-view. If provided in the data, users can change the representation in the side-view to show atom-level attributions in the 2D compound structure. This could be used for comparing neighbors for example to check if machine learning model explanations - generated for those data points - make sense. Using the grouping tool allows for easier interaction with item neighborhoods.",
+        "tags": ["SDF", "scatter", "medicine", "UMAP", "cluster"],
+        "imagePath": "cime.png",
+        "datasetLinks": {
+            "test": "https://cime-demo.caleydoapp.org/",
+            "Data files": "#"
+        }
     }
 
 ]
