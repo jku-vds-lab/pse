@@ -23,7 +23,7 @@ interface IDatasetInfo {
 
 function DatasetsCard(props: IDatasetCardProps) {
   const [collapseButton, setcollapseButton] = useState("Show more");
-  const datasetImage = require(`../assets/datasetImages/${props.datasetInfo.imagePath}`).default;
+  const datasetImage = require(`../assets/datasetImages/${props.datasetInfo.imagePath}`);
 
   return (
     <div className="col">
