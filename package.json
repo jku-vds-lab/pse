@@ -52,7 +52,7 @@
       "last 1 safari version"
     ]
   },
-  "resolutions": {
+"overrides": {
     "mini-css-extract-plugin": "2.4.5"
   }
 }
