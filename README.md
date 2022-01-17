@@ -10,6 +10,8 @@ In order to link directly to a subset of dataset cards, one has to specify the d
 the ids have to given in the URL after the `datasets/` and separated by the `&` character.
 Here are some examples to clarify this.
 
+## Example links
+
 ### Showing all dataset cards:
 `.../datasets/all`
 
