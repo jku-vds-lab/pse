@@ -4,4 +4,18 @@ $secondary: #b2d349;
 $success: #ae619d;
 $danger: #f15a4e;
 $warning: #fdb812;
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Modify font colors of buttons to fit new color scheme
+.btn-outline-danger:hover {
+    color: #fff;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+}

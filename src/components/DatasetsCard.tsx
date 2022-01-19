@@ -33,7 +33,7 @@ function DatasetsCard(props: IDatasetCardProps) {
           <h5 className="card-title">{props.datasetInfo.name}</h5>
           <p className="card-text mb-0">{props.datasetInfo.primaryDescription}</p>
           <p className="card-text collapse mb-0" id={`description-${props.datasetInfo.id}`}>{props.datasetInfo.secondaryDescription}</p>
-          <button id={`collapseButton-${props.datasetInfo.id}`} className="btn btn-outline-secondary mt-3 mb-3" data-bs-toggle="collapse" data-bs-target={`#description-${props.datasetInfo.id}`} aria-expanded="false" aria-controls={`description-${props.datasetInfo.id}`}
+          <button id={`collapseButton-${props.datasetInfo.id}`} className="btn btn-outline-danger mt-3 mb-3" data-bs-toggle="collapse" data-bs-target={`#description-${props.datasetInfo.id}`} aria-expanded="false" aria-controls={`description-${props.datasetInfo.id}`}
             onClick={() => {
               if (document.getElementById(`collapseButton-${props.datasetInfo.id}`)?.classList.contains("collapsed")) {
                 setcollapseButton("Show more")
@@ -47,12 +47,12 @@ function DatasetsCard(props: IDatasetCardProps) {
             {props.datasetInfo.datasetLinks &&
               Object.entries(props.datasetInfo.datasetLinks).map(([key, value]) => {
                 if (key === 'Data files') {
-                  return (<a key={key} href={String(value)} className="card-link link-secondary">
+                  return (<a key={key} href={String(value)} className="card-link link-success">
                     <FontAwesomeIcon icon={faGithub} size="lg" />
                   </a>)
                 }
-                if (key === 'paper link') {
-                  return (<a key={key} href={String(value)} className="card-link link-secondary">
+                else if (key === 'paper link') {
+                  return (<a key={key} href={String(value)} className="card-link link-success">
                     <FontAwesomeIcon icon={faBook} size="lg" />
                   </a>)
                 }
