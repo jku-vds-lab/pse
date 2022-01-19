@@ -1,7 +1,24 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import screenshot from '../assets/screenshot.png';
+import '../styles/Hero.css';
 
 function Hero() {
+    const [imageBig, setImageBig] = React.useState(false);
+
+    // Expand Hero image on click
+    const toggleImage = () => {
+        if (imageBig) {
+            setImageBig(false);
+            document.getElementById('hero-image')?.setAttribute("style", "transform:scale(1);");
+            document.getElementById('hero-image-wrapper')?.setAttribute("style", "overflow:hidden;");
+        } else {
+            setImageBig(true);
+            document.getElementById('hero-image')?.setAttribute("style", "transform:scale(1.7);");
+            document.getElementById('hero-image-wrapper')?.setAttribute("style", "overflow:visible;");
+        }
+    }
+
     // This function is needed to control the modal video when closed, since Bootstrap cannot handle it alone.
     // See also: https://stackoverflow.com/questions/8667882/how-to-pause-a-youtube-player-when-hiding-the-iframe
     const toggleVideo = (state: string) => {
@@ -15,6 +32,7 @@ function Hero() {
         const func = state === 'hide' ? 'pauseVideo' : 'playVideo';
         iframe?.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
     }
+
 
     return (
         <div className="px-4 pt-5 my-5 text-center border-bottom shadow-sm mb-5 bg-body rounded">
@@ -49,9 +67,18 @@ function Hero() {
 
                 </div>
             </div>
-            <div className="overflow-hidden" style={{ maxHeight: " 40vh" }}>
+            <div id="hero-image-wrapper">
                 <div className="container px-5">
-                    <img src={screenshot} className="img-fluid border rounded-3 shadow-lg mb-4" alt="ProjectionPathExplorer Screenshot" width="700" height="500" loading="lazy" />
+                    <img 
+                    id="hero-image"
+                    src={screenshot} 
+                    className="img-fluid border rounded-3 shadow-lg mb-4" 
+                    alt="ProjectionPathExplorer Screenshot" 
+                    width="700" 
+                    height="500" 
+                    loading="lazy" 
+                    onClick={() => toggleImage()}
+                    />
                 </div>
             </div>
         </div>

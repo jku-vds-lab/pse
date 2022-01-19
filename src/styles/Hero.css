@@ -1,0 +1,9 @@
+#hero-image {
+    transition:transform 0.25s ease;
+    cursor: pointer;
+}
+
+#hero-image-wrapper {
+    max-height: 40vh;
+    overflow: hidden;
+}
