@@ -2,7 +2,11 @@ import PublicationsCard from '../components/PublicationsCard';
 
 function PublicationsPage() {
   return (
-    <div className="container d-flex flex-column mt-5">
+    <div className="container d-flex flex-column mt-3">
+      <div className='container text-center mb-4'>
+        <h1 className='display-6'>Publications Overview</h1>
+      </div>
+
       <PublicationsCard
         title={"Projection Path Explorer"}
         subTitle={"Exploring Visual Patterns in Projected Decision-Making Paths"}
