@@ -30,7 +30,7 @@ function Header() {
 
             <li>
               <form className="d-flex">
-                <a className="btn btn-outline-success me-2" type="button" href="https://jku-vds-lab.at/projection-space-explorer/?set=neural">Start Application</a>
+                <a className="btn btn-outline-primary me-2" type="button" href="https://jku-vds-lab.at/projection-space-explorer/?set=neural">Start Application</a>
               </form>
             </li>
 

@@ -22,7 +22,7 @@ export enum categoryToDescriptionEnum {
 }
 
 export enum bsColorToHex {
-  "primary" = "#0d6efd",
+  "primary" = "#007dad",
   "secondary" = "#6c757d",
   "success" = "#198754",
   "danger" = "#dc3545",
