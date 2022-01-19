@@ -23,10 +23,10 @@ export enum categoryToDescriptionEnum {
 
 export enum bsColorToHex {
   "primary" = "#007dad",
-  "secondary" = "#6c757d",
-  "success" = "#198754",
-  "danger" = "#dc3545",
-  "warning" = "#ffc107",
+  "secondary" = "#b2d349",
+  "success" = "#ae619d",
+  "danger" = "#f15a4e",
+  "warning" = "#fdb812",
   "info" = "#0AACCC",
   "light" = "#B1B2B3",
   "dark" = "#212529",
