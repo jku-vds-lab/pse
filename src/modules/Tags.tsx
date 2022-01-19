@@ -27,7 +27,7 @@ export enum bsColorToHex {
   "success" = "#ae619d",
   "danger" = "#f15a4e",
   "warning" = "#fdb812",
-  "info" = "#0AACCC",
+  "info" = "#8ac9e1",
   "light" = "#B1B2B3",
   "dark" = "#212529",
 }
