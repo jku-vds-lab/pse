@@ -14,7 +14,7 @@ function Hero() {
             document.getElementById('hero-image-wrapper')?.setAttribute("style", "overflow:hidden;");
         } else {
             setImageBig(true);
-            document.getElementById('hero-image')?.setAttribute("style", "transform:scale(1.7);");
+            document.getElementById('hero-image')?.setAttribute("style", "transform:scale(1.5);");
             document.getElementById('hero-image-wrapper')?.setAttribute("style", "overflow:visible;");
         }
     }
