@@ -1,8 +1,8 @@
 import { tagToCategoryEnum, categoryToColorEnum } from '../modules/Tags';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faBook} from "@fortawesome/free-solid-svg-icons";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
 
 interface IDatasetCardProps {
   datasetInfo: IDatasetInfo
@@ -24,6 +24,22 @@ interface IDatasetInfo {
 function DatasetsCard(props: IDatasetCardProps) {
   const [collapseButton, setcollapseButton] = useState("Show more");
   const datasetImage = require(`../assets/datasetImages/${props.datasetInfo.imagePath}`);
+  const [pseLinks, setPseLinks] = useState<any[]>();
+  const [specialLinks, setSpecialLinks] = useState<any[]>();
+
+  useEffect(() => {
+    if (props.datasetInfo.datasetLinks) {
+      const linkArray = Object.entries(props.datasetInfo.datasetLinks);
+      const specialLinks = linkArray.filter(([key, value]) => {
+        return (key === "Data files" || key === "paper link")
+      });
+      const normalLinks = linkArray.filter(([key, value]) => {
+        return !(key === "Data files" || key === "paper link")
+      });
+      setPseLinks(normalLinks)
+      setSpecialLinks(specialLinks)
+    }
+  }, [props.datasetInfo.datasetLinks])
 
   return (
     <div className="col">
@@ -33,7 +49,7 @@ function DatasetsCard(props: IDatasetCardProps) {
           <h5 className="card-title">{props.datasetInfo.name}</h5>
           <p className="card-text mb-0">{props.datasetInfo.primaryDescription}</p>
           <p className="card-text collapse mb-0" id={`description-${props.datasetInfo.id}`}>{props.datasetInfo.secondaryDescription}</p>
-          <button id={`collapseButton-${props.datasetInfo.id}`} className="btn btn-outline-secondary mt-3 mb-3" data-bs-toggle="collapse" data-bs-target={`#description-${props.datasetInfo.id}`} aria-expanded="false" aria-controls={`description-${props.datasetInfo.id}`}
+          <button id={`collapseButton-${props.datasetInfo.id}`} className="btn btn-outline-danger btn-sm mt-3 mb-3" data-bs-toggle="collapse" data-bs-target={`#description-${props.datasetInfo.id}`} aria-expanded="false" aria-controls={`description-${props.datasetInfo.id}`}
             onClick={() => {
               if (document.getElementById(`collapseButton-${props.datasetInfo.id}`)?.classList.contains("collapsed")) {
                 setcollapseButton("Show more")
@@ -44,22 +60,25 @@ function DatasetsCard(props: IDatasetCardProps) {
             {collapseButton}
           </button>
           <div className="mb-3">
-            {props.datasetInfo.datasetLinks &&
-              Object.entries(props.datasetInfo.datasetLinks).map(([key, value]) => {
-                if (key === 'Data files') {
-                  return (<a key={key} href={String(value)} className="card-link link-secondary">
-                    <FontAwesomeIcon icon={faGithub} size="lg" />
-                  </a>)
+
+            <div className='mb-2'>
+              {specialLinks &&
+                specialLinks?.map(([key, value]) => {
+                  if (key === 'Data files') {
+                    return (<a key={key} href={String(value)} className="card-link link-success">
+                      <FontAwesomeIcon icon={faGithub} size="lg" />
+                    </a>)
+                  }
+                  else {
+                    return (<a key={key} href={String(value)} className="card-link link-success">
+                      <FontAwesomeIcon icon={faBook} size="lg" />
+                    </a>)
+                  }
                 }
-                if (key === 'paper link') {
-                  return (<a key={key} href={String(value)} className="card-link link-secondary">
-                    <FontAwesomeIcon icon={faBook} size="lg" />
-                  </a>)
-                }
-                else {
-                  return (<a key={key} href={String(value)} className="card-link link-primary">{key}</a>)
-                }
-              })}
+                )}
+            </div>
+            {pseLinks &&
+              pseLinks?.map(([key, value]) => (<a key={key} href={String(value)} className="card-link link-primary">{key}</a>))}
           </div>
 
           <div>

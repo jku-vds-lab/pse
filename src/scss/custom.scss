@@ -1,0 +1,26 @@
+// Use VDS color scheme for first 5 colors of bootstrap
+$primary: #007dad;
+$secondary: #b2d349;
+$success: #ae619d;
+$danger: #f15a4e;
+$warning: #fdb812;
+$info: #8ac9e1;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Modify font colors of buttons to fit new color scheme
+.btn-outline-danger:hover {
+    color: #fff;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+}
+
+.btn-outline-warning:hover {
+    color: #fff;
+}
