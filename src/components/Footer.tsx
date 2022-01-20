@@ -52,9 +52,9 @@ function Footer() {
               <h6 className="text-uppercase fw-bold mb-4">
                 Contact
               </h6>
-              <p><FontAwesomeIcon icon={faHome} /> <a href="https://www.google.com/maps/place/Science+Park+3/@48.3348119,14.322509,17z/data=!4m12!1m6!3m5!1s0x477398434ec8e84d:0xe0d1670c08989881!2sJohannes+Kepler+Universit%C3%A4t+Linz+-+JKU!8m2!3d48.336614!4d14.319305!3m4!1s0x4773991d5880f437:0xc58d7ca1cdc2b04!8m2!3d48.3351119!4d14.3242242">Altenberg Str. 66, 4040 Linz</a></p>
+              <p><FontAwesomeIcon icon={faHome} /> <a href="https://www.google.com/maps/place/Science+Park+3/@48.3348119,14.322509,17z/data=!4m12!1m6!3m5!1s0x477398434ec8e84d:0xe0d1670c08989881!2sJohannes+Kepler+Universit%C3%A4t+Linz+-+JKU!8m2!3d48.336614!4d14.319305!3m4!1s0x4773991d5880f437:0xc58d7ca1cdc2b04!8m2!3d48.3351119!4d14.3242242">Altenberger Str. 66, 4040 Linz</a></p>
               <p>
-                <FontAwesomeIcon icon={faEnvelope} /> contact@jku-vds-lab.at
+                <FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:contact@jku-vds-lab.at">contact@jku-vds-lab.at</a>
               </p>
             </div>
           </div>
