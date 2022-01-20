@@ -43,11 +43,11 @@ function Hero() {
                 </p>
                 <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                     <a className="btn btn-primary btn-lg px-4 me-sm-3" type="button" href="https://jku-vds-lab.at/projection-space-explorer/?set=neural">Start Application</a>
-                    <Link to='/datasets/all' className="btn btn-outline-secondary btn-lg px-4 me-sm-3">
+                    <Link to='/datasets/all' className="btn btn-outline-warning btn-lg px-4 me-sm-3">
                         Datasets
                     </Link >
 
-                    <button id="hero-video-button" className="btn btn-outline-success btn-lg px-4" data-bs-toggle="modal" data-tagvideo="https://www.youtube.com/embed/0svaUdXNUCg?enablejsapi=1" data-bs-target="#videoModal" onClick={() => toggleVideo('')}>Video</button>
+                    <button id="hero-video-button" className="btn btn-outline-danger btn-lg px-4" data-bs-toggle="modal" data-tagvideo="https://www.youtube.com/embed/0svaUdXNUCg?enablejsapi=1" data-bs-target="#videoModal" onClick={() => toggleVideo('')}>Video</button>
 
                     <div className="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="videoModalLabel" aria-hidden="true">
                         <div className="modal-dialog modal-lg">
