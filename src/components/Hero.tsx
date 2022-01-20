@@ -68,11 +68,11 @@ function Hero() {
                 </div>
             </div>
             <div id="hero-image-wrapper">
-                <div className="container px-5">
+                <div>
                     <img 
                     id="hero-image"
                     src={screenshot} 
-                    className="img-fluid border rounded-3 shadow-lg mb-4" 
+                    className="img-fluid border rounded-3 shadow-lg" 
                     alt="ProjectionPathExplorer Screenshot" 
                     width="700" 
                     height="500" 
