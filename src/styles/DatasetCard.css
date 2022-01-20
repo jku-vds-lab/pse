@@ -1,0 +1,9 @@
+.show-button {
+    border-color: #495057;
+    color: #495057;
+}
+
+.show-button:hover {
+    background-color: #495057;
+    color: #fff;
+}

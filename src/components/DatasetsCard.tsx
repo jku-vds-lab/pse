@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
+import '../styles/DatasetCard.css';
 
 interface IDatasetCardProps {
   datasetInfo: IDatasetInfo
@@ -49,7 +50,7 @@ function DatasetsCard(props: IDatasetCardProps) {
           <h5 className="card-title">{props.datasetInfo.name}</h5>
           <p className="card-text mb-0">{props.datasetInfo.primaryDescription}</p>
           <p className="card-text collapse mb-0" id={`description-${props.datasetInfo.id}`}>{props.datasetInfo.secondaryDescription}</p>
-          <button id={`collapseButton-${props.datasetInfo.id}`} className="btn btn-outline-danger btn-sm mt-3 mb-3" data-bs-toggle="collapse" data-bs-target={`#description-${props.datasetInfo.id}`} aria-expanded="false" aria-controls={`description-${props.datasetInfo.id}`}
+          <button id={`collapseButton-${props.datasetInfo.id}`} className="show-button btn btn-outline btn-sm mt-3 mb-3" data-bs-toggle="collapse" data-bs-target={`#description-${props.datasetInfo.id}`} aria-expanded="false" aria-controls={`description-${props.datasetInfo.id}`}
             onClick={() => {
               if (document.getElementById(`collapseButton-${props.datasetInfo.id}`)?.classList.contains("collapsed")) {
                 setcollapseButton("Show more")
@@ -65,13 +66,13 @@ function DatasetsCard(props: IDatasetCardProps) {
               {specialLinks &&
                 specialLinks?.map(([key, value]) => {
                   if (key === 'Data files') {
-                    return (<a key={key} href={String(value)} className="card-link link-success">
-                      <FontAwesomeIcon icon={faGithub} size="lg" />
+                    return (<a key={key} href={String(value)} className="card-link">
+                      <FontAwesomeIcon icon={faGithub} size="lg" style={{color: "#495057"}} />
                     </a>)
                   }
                   else {
-                    return (<a key={key} href={String(value)} className="card-link link-success">
-                      <FontAwesomeIcon icon={faBook} size="lg" />
+                    return (<a key={key} href={String(value)} className="card-link">
+                      <FontAwesomeIcon icon={faBook} size="lg" style={{color: "#495057"}} />
                     </a>)
                   }
                 }
