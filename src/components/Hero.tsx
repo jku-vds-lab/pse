@@ -58,7 +58,7 @@ function Hero() {
                                 </div>
                                 <div className="modal-body">
                                     <div id="hero-video-iframe-wrapper" className="ratio ratio-16x9">
-                                        <iframe title="video modal" src="https://www.youtube.com/embed/0svaUdXNUCg?enablejsapi=1" allow="autoplay;" allowFullScreen></iframe>
+                                        <iframe title="video modal" src="https://www.youtube.com/embed/yBCe8SqGwK8?enablejsapi=1" allow="autoplay;" allowFullScreen></iframe>
                                     </div>
                                 </div>
                             </div>
