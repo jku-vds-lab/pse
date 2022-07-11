@@ -7,7 +7,7 @@ import PublicationsPage from './pages/Publicationspage';
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <div className="App">
         <Header />
         <Switch>
