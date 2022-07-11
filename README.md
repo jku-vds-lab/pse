@@ -13,13 +13,13 @@ Here are some examples to clarify this.
 ## Example links
 
 ### Showing all dataset cards:
-`.../datasets/all`
+`.../#/datasets/all`
 
 ### Showing the cohort analysis data:
-`.../datasets/cohort_analysis`
+`.../#/datasets/cohort_analysis`
 
 ### Showing the rubik's cube and chess datasets:
-`.../datasets/rubik&chess`
+`.../#/datasets/rubik&chess`
 
 ## Start Applicatiion
 
