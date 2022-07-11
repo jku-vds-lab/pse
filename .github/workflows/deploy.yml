@@ -30,8 +30,8 @@ jobs:
 
       -
         name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v1
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           build_dir: build
         env:
-          GITHUB_PAT: ${{ secrets.KLAUS_GITHUB_DEPLOY_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
