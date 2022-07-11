@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/Homepage';
@@ -7,7 +7,7 @@ import PublicationsPage from './pages/Publicationspage';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Header />
         <Switch>
@@ -17,7 +17,7 @@ function App() {
         </Switch>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
