@@ -19,7 +19,7 @@ function Footer() {
           <div className="row mt-3">
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
-                <FontAwesomeIcon icon={faGem} /> JKU Visual Data Science Lab
+              JKU Visual Data Science Lab
               </h6>
               <p>
                 We are part of the Institute of Computer Graphics at the Johannes Kepler University Linz in Austria. Our research focuses on developing novel visual analysis methods and tools that enable users to make sense of complex and heterogeneous data.
