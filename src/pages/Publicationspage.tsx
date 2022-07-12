@@ -37,6 +37,13 @@ function PublicationsPage() {
         link={"https://jku-vds-lab.at/publications/2022_embedding_structure/"}
         imagePath={"multilevel.png"}
       />
+
+      <PublicationsCard
+        title={"ChemInformatics Model Explorer (CIME): Exploratory Analysis of Chemical Model Explanations"}
+        description={"The introduction of machine learning to small molecule research – an inherently multidisciplinary field in which chemists and data scientists combine their expertise and collaborate – has been vital to making screening processes more efficient. In recent years, numerous models that predict pharmacokinetic properties or bioactivity have been published, and these are used on a daily basis by chemists to make decisions and prioritize ideas. The emerging field of explainable artificial intelligence is opening up new possibilities for understanding the reasoning that underlies a model. In small molecule research, this means relating contributions of substructures of compounds to their predicted properties, which in turn also allows the areas of the compounds that have the greatest influence on the outcome to be identified. However, there is no interactive visualization tool that facilitates such interdisciplinary collaborations towards interpretability of machine learning models for small molecules. To fill this gap, we present CIME (ChemInformatics Model Explorer), an interactive web-based system that allows users to inspect chemical data sets, visualize model explanations, compare interpretability techniques, and explore subgroups of compounds. The tool is model-agnostic and can be run on a server or a workstation."}
+        link={"https://jku-vds-lab.at/publications/2022_cheminformatics_cime/"}
+        imagePath={"cime.png"}
+      />
     </div>
   );
 }
