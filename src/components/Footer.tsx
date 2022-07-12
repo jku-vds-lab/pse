@@ -42,7 +42,7 @@ function Footer() {
               </p>
               <p>
                 <a href='https://github.com/jku-vds-lab/projection-space-explorer'>
-                  Github repository
+                  Github Repository
                 </a>
               </p>
 
@@ -76,7 +76,7 @@ function Footer() {
         </a>
       </div>
       <div className="text-center p-4 bg-light">
-        Copyright © 2021 <a className="text-dark" href="https://jku-vds-lab.at/">JKU Visual Data Science Lab</a>.
+        Copyright © 2022 <a className="text-dark" href="https://jku-vds-lab.at/">JKU Visual Data Science Lab</a>.
       </div>
     </footer>
   );
