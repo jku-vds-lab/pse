@@ -65,10 +65,9 @@ export const datasets = [
         "tags": ["numerical", "categorical", "tabular", "scatter", "groups", "group-to-group relationships", "medicine", "UMAP", "cluster"],
         "imagePath": "cancer.png",
         "datasetLinks": {
-            "TCGA Sub-Sampled (TODO)": "#",
-            "TCGA Lung, Colorectal, and Pancreatic Cancer (TODO)": "#",
+            "TCGA Lung, Colorectal, and Pancreatic Cancer": "https://jku-vds-lab.at/apps/embeding-structure-explorer/",
             "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/coral",
-            "paper link": "https://jku-vds-lab.at/publications/2021_preprint_multilevel-embedding/"
+            "paper link": "https://jku-vds-lab.at/publications/2022_embedding_structure/"
         }
     },
     {
@@ -77,7 +76,7 @@ export const datasets = [
         "id": "go",
         "type": "temporal",
         "primaryDescription": "Go is an abstract strategy board game for two players in which the aim is to surround more territory than the opponent. The game was invented in China more than 2,500 years ago and is believed to be the oldest board game continuously played to the present day.",
-        "secondaryDescription": "TODO: Add mode description when available!",
+        "secondaryDescription": " ",
         "tags": ["categorical", "tabular", "temporal", "games", "multiple-runs", "different-origins", "progressing", "dense", "regular", "cluster", "transition", "dense starting points", "sparse intermediate points", "sparse end points", "bundles", "similar shapes"],
         "imagePath": "go.png",
         "datasetLinks": {
@@ -97,14 +96,14 @@ export const datasets = [
         "tags": ["numerical", "categorical", "tabular", "temporal", "science", "MDS", "t-SNE", "UMAP", "multiple-runs", "same-origins", "progressing", "oscillation", "intersections", "sparse", "regular","cluster", "transition", "cycle", "U-turn", "outlier", "alternation", "dense starting points", "dense intermediate points", "dense end points", "sparse end points", "bundles", "similar shapes"],
         "imagePath": "gapminder.png",
         "datasetLinks": {
-            "Synthetic MDS": "#",
-            "Synthetic t-SNE": "#",
-            "Synthetic t-SNE (w_num=5)": "#",
-            "Synthetic UMAP": "#",
-            "User MDS": "#",
-            "User t-SNE": "#",
-            "User UMAP": "#",
-            "Data files": "#",
+            "Synthetic MDS": "https://provectories.jku-vds-lab.at",
+            "Synthetic t-SNE": "https://provectories.jku-vds-lab.at",
+            "Synthetic t-SNE (w_num=5)": "https://provectories.jku-vds-lab.at",
+            "Synthetic UMAP": "https://provectories.jku-vds-lab.at",
+            "User MDS": "https://provectories.jku-vds-lab.at",
+            "User t-SNE": "https://provectories.jku-vds-lab.at",
+            "User UMAP": "https://provectories.jku-vds-lab.at",
+            "Data files": "https://provectories.jku-vds-lab.at",
             "paper link": "https://jku-vds-lab.at/publications/2020_preprint_provectories/"
         }
     },
@@ -118,9 +117,9 @@ export const datasets = [
         "tags": ["numerical", "tabular", "temporal", "science", "t-SNE", "multiple-runs", "same-origins", "progressing", "oscillation", "sparse", "regular", "cluster", "U-turn", "alternation", "dense starting points", "sparse end points", "bundles", "similar shapes"],
         "imagePath": "user_intent.png",
         "datasetLinks": {
-            "All Outlier + Cluster": "#",
-            "Outlier All": "#",
-            "Data files": "#",
+            "All Outlier + Cluster": "https://provectories.jku-vds-lab.at",
+            "Outlier All": "https://provectories.jku-vds-lab.at",
+            "Data files": "https://provectories.jku-vds-lab.at",
             "paper link": "https://jku-vds-lab.at/publications/2020_preprint_provectories/"
         }
     },
@@ -135,7 +134,7 @@ export const datasets = [
         "imagePath": "cime.png",
         "datasetLinks": {
             "test": "https://cime-demo.caleydoapp.org/",
-            "Data files": "#"
+            "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/cime/datasets/chemvis"
         }
     }
 
