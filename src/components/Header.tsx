@@ -17,7 +17,7 @@ function Header() {
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
             <li className="nav-item me-2">
-              <Link to='/datasets/all' className="nav-link">
+              <Link to='/datasets' className="nav-link">
                 Datasets
               </Link>
             </li>

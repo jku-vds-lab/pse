@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import Select, { StylesConfig } from 'react-select';
 import chroma from 'chroma-js';
 import makeAnimated from 'react-select/animated';
@@ -36,15 +36,16 @@ const removeElementsFromArray = (array1: string[], array2: string[]) => {
 
 // filter function for react select
 const filterDatasets = (allDatasetIds: string[], selection: string[], datasetTags: string[], datasetId: string) => {
+  const datasetTagsLower = datasetTags.map((tag) => tag.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_'));
   // calculate intersection of all dataset ids with selection to check if dataset ids are in selection
   const selectionDatasets = intersectArrays(allDatasetIds, selection);
 
-  // if no dataset ids are selected the just filter by tags
+  // if no dataset ids are selected then just filter by tags
   if (selectionDatasets.length === 0) {
-    return checkSubsetArraysTags(selection, datasetTags)
+    return checkSubsetArraysTags(selection, datasetTagsLower)
   }
   else if (selectionDatasets.includes(datasetId)) {
-    return checkSubsetArraysTags(removeElementsFromArray(selection, allDatasetIds), datasetTags)
+    return checkSubsetArraysTags(removeElementsFromArray(selection, allDatasetIds), datasetTagsLower)
   }
   else {
     return false;
@@ -68,14 +69,17 @@ const options = categoryList.map((cat: string): ISelectOptions => {
   const tags = tagList.filter((tag) => tagToCategoryEnum[tag as keyof typeof tagToCategoryEnum] === cat);
   // get color of those tags
   const color = bsColorToHex[categoryToColorEnum[cat as keyof typeof categoryToColorEnum]]
-  const tagOptions = tags.map((tag): ITagOptions => ({ value: tag, label: tag, color: color }));
+  const tagOptions = tags.map((tag): ITagOptions => ({ value: tag.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_'), label: tag, color: color }));
   return { label: cat, options: tagOptions };
 })
 
 // add card names to options
 // create list of dataset labels and values
-const tagOptionsCardNames = datasets.map((dataset) => ({label: dataset.name, value: dataset.id, color: "#888888"}));
-options.push({label: "Datasets", options: tagOptionsCardNames})
+const tagOptionsCardNames = datasets.map((dataset) => ({ label: dataset.name, value: dataset.id, color: "#888888" }));
+options.push({ label: "Datasets", options: tagOptionsCardNames })
+
+// create plain list of all options
+const optionList = options.map((group) => group.options).flat();
 
 // option to change react select elements to color according to tags
 const colourStyles: StylesConfig<any, true> = {
@@ -130,26 +134,34 @@ function DatasetsPage() {
   const [selectedFilter, setselectedFilter] = React.useState<string[]>([]);
   const [datasetIds] = React.useState<string[]>(datasets.map((dataset) => dataset.id));
 
-  // get id of dataset from url
-  // Pattern of given URL string: dataset_id1&dataset_id2&dataset_id3&...
-  const {datasetIdsUrl} = useParams<{datasetIdsUrl: string}>();
+  const history = useHistory()
+  const location = useLocation();
 
   React.useEffect(() => {
-    // change filter according to url
-    if (datasetIdsUrl === 'all') {
+    const query = location.search.split('=').pop();
+    if (query) {
+      const filters = query?.split('-');
+      // update filter
+      setselectedFilter(filters)
+      // update selection
+      const listOptions = optionList.filter((option) => filters.includes(option.value));
+      setSelectedOptions(listOptions);
+    } else {
       setselectedFilter([])
       setSelectedOptions([]);
     }
-    else {
-      // create list of given ids, ids are separated by &
-      const datasetListIds = datasetIdsUrl.split("&");
-      // update filter
-      setselectedFilter(datasetListIds)
-      // update selection
-      const datasetListOptions = tagOptionsCardNames.filter((option) => datasetListIds.includes(option.value));
-      setSelectedOptions(datasetListOptions);
+  }, [])
+
+  React.useEffect(() => {
+    const params = new URLSearchParams()
+    if (selectedFilter) {
+      const query = selectedFilter.join('-');
+      params.append("tags", query);
+    } else {
+      params.delete("tags");
     }
-  }, [datasetIdsUrl])
+    history.push({ search: params.toString() })
+  }, [selectedFilter, history])
 
   return (
     <div>
@@ -160,20 +172,20 @@ function DatasetsPage() {
       <div className="d-grid gap-2 d-lg-flex justify-content-lg-center mb-5 container">
         <div className='col-lg-5 d-flex flex-column justify-content-center'>
 
-        <Select
-          className={"col-lg-5 w-100"}
-          value={selectedOptions}
-          placeholder={"Filter datasets by tags or names . . ."}
-          closeMenuOnSelect={false}
-          components={animatedComponents}
-          isMulti
-          options={options}
-          styles={colourStyles}
-          onChange={(selection) => {
-            setSelectedOptions(selection as ITagOptions[])
-            setselectedFilter((selection as ITagOptions[]).map((option: ITagOptions) => option.value))
-          }}
-        />
+          <Select
+            className={"col-lg-5 w-100"}
+            value={selectedOptions}
+            placeholder={"Filter datasets by tags or names . . ."}
+            closeMenuOnSelect={false}
+            components={animatedComponents}
+            isMulti
+            options={options}
+            styles={colourStyles}
+            onChange={(selection) => {
+              setSelectedOptions(selection as ITagOptions[])
+              setselectedFilter((selection as ITagOptions[]).map((option: ITagOptions) => option.value))
+            }}
+          />
         </div>
         <Legend />
       </div>
