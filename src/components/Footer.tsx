@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 // get our fontawesome imports
 import { faGithub, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faGem, faHome, faEnvelope, faUniversity } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faEnvelope, faUniversity } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer() {
