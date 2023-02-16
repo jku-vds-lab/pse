@@ -9,12 +9,12 @@ export const datasets = [
         "tags": ["categorical", "tabular", "temporal", "games", "t-SNE", "Euclidean distance", "single-run", "multiple-runs", "same-origins", "different-origins", "progressing", "oscillation", "intersections", "regular", "cluster", "cycle", "U-turn", "dense intermediate points", "dense end points", "bundles", "similar shapes"],
         "imagePath": "rubik.png",
         "datasetLinks": {
-            "1x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube1x2_different_origins.csv", 
-            "1x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube1x2.csv",
-            "10x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube10x2_different_origins.csv",
-            "10x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube10x2.csv",
-            "100x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube100x2_different_origins.csv",
-            "100x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer?set=rubik/cube100x2.csv",
+            "1x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer-app?set=rubik/cube1x2_different_origins.csv", 
+            "1x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer-app?set=rubik/cube1x2.csv",
+            "10x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer-app?set=rubik/cube10x2_different_origins.csv",
+            "10x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer-app?set=rubik/cube10x2.csv",
+            "100x2 Different Origins": "https://jku-vds-lab.at/projection-space-explorer-app?set=rubik/cube100x2_different_origins.csv",
+            "100x2 Same Origins": "https://jku-vds-lab.at/projection-space-explorer-app?set=rubik/cube100x2.csv",
             "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/rubik",
             "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
@@ -29,10 +29,10 @@ export const datasets = [
         "tags": ["categorical", "tabular", "temporal", "groups", "games", "t-SNE", "multiple-runs", "same-origins", "progressing", "dense", "regular", "cluster", "transition", "U-turn", "dense starting points", "dense intermediate points", "bundles", "similar shapes"],
         "imagePath": "chess.png",
         "datasetLinks": {
-            "190 Games": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess16k.csv",
-            "450 Games": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess40k.csv",
-            "450 Games (Groups)": "https://jku-vds-lab.at/projection-space-explorer?set=chess/chess40k_groups.json",
-            "AlphaZero vs Stockfish": "https://jku-vds-lab.at/projection-space-explorer?set=chess/alphazero.csv",
+            "190 Games": "https://jku-vds-lab.at/projection-space-explorer-app?set=chess/chess16k.csv",
+            "450 Games": "https://jku-vds-lab.at/projection-space-explorer-app?set=chess/chess40k.csv",
+            "450 Games (Groups)": "https://jku-vds-lab.at/projection-space-explorer-app?set=chess/chess40k_groups.json",
+            "AlphaZero vs Stockfish": "https://jku-vds-lab.at/projection-space-explorer-app?set=chess/alphazero.csv",
             "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/chess",
             "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
@@ -47,10 +47,10 @@ export const datasets = [
         "tags": ["numerical", "tabular", "temporal", "science", "PCA", "t-SNE",  "Euclidean distance", "multiple-runs", "same-origins", "different-origins", "progressing", "oscillation", "dense", "regular", "transition", "U-turn", "dense starting points", "bundles", "similar shapes"],
         "imagePath": "nn.png",
         "datasetLinks": {
-            "Rnd Weights": "https://jku-vds-lab.at/projection-space-explorer?set=neural/random_weights.csv",
-            "Rnd Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer?set=neural/random_confmat.csv",
-            "Weights": "https://jku-vds-lab.at/projection-space-explorer?set=neural/learning_weights.csv",
-            "Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer?set=neural/learning_confmat.csv",
+            "Rnd Weights": "https://jku-vds-lab.at/projection-space-explorer-app?set=neural/random_weights.csv",
+            "Rnd Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer-app?set=neural/random_confmat.csv",
+            "Weights": "https://jku-vds-lab.at/projection-space-explorer-app?set=neural/learning_weights.csv",
+            "Confusion Matrix": "https://jku-vds-lab.at/projection-space-explorer-app?set=neural/learning_confmat.csv",
             "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/neural",
             "paper link": "https://jku-vds-lab.at/publications/2020_tiis_pathexplorer/"
         }
@@ -80,9 +80,9 @@ export const datasets = [
         "tags": ["categorical", "tabular", "temporal", "games", "multiple-runs", "different-origins", "progressing", "dense", "regular", "cluster", "transition", "dense starting points", "sparse intermediate points", "sparse end points", "bundles", "similar shapes"],
         "imagePath": "go.png",
         "datasetLinks": {
-            "State features": "https://jku-vds-lab.at/projection-space-explorer?set=go/combined.csv",
-            "Histogram features": "https://jku-vds-lab.at/projection-space-explorer?set=go/histogram.csv",
-            "Move features (wavelet)": "https://jku-vds-lab.at/projection-space-explorer?set=go/move_wavelet.csv",
+            "State features": "https://jku-vds-lab.at/projection-space-explorer-app?set=go/combined.csv",
+            "Histogram features": "https://jku-vds-lab.at/projection-space-explorer-app?set=go/histogram.csv",
+            "Move features (wavelet)": "https://jku-vds-lab.at/projection-space-explorer-app?set=go/move_wavelet.csv",
             "Data files": "https://github.com/jku-vds-lab/projection-space-explorer/tree/master/datasets/go"
         }
     },
